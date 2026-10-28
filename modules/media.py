@@ -251,7 +251,6 @@ class Media(commands.Cog):
                 }
         async with self.bot.session.get(url, headers=headers) as resp:
             data = await resp.json()
-            print(data)
             gameid = data[0]['id']
 
         url = f"https://api.opencritic.com/api/game/{gameid}"

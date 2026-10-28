@@ -19,7 +19,6 @@ class units:
 
         def mi_km(m):
             km = cls.mi_to_km(int(float(m.group(1))))
-            print(km)
             return f"{km} km/h" if not both else f"{km} km/h / {m.group(0)}"
         
         def in_cm(m: re.Match):
