@@ -138,7 +138,7 @@ class WotdButton(discord.ui.View):
     @discord.ui.button(label="Set New Word", emoji="\N{MEMO}", style=discord.ButtonStyle.blurple)
     async def on_click_wotd(self, interaction, button):
         if interaction.user.id != self.wotd_finder.id:
-            await interaction.response.send_message(f"You didn't find the word", ephemeral=True)
+            await interaction.response.send_message("You didn't find the word", ephemeral=True)
         else:
             await self.do_wotd_prompt(interaction)
 

@@ -485,7 +485,7 @@ class VoiceTTS(commands.Cog):
         output = f"**Available voices ({locale}):**\n" + "\n".join(lines)
         if len(filtered) > 30:
             output += f"\n... and {len(filtered) - 30} more"
-        output += f"\n\nSet with: `!tts voice <name>`"
+        output += "\n\nSet with: `!tts voice <name>`"
 
         # Split if too long
         if len(output) > 2000:

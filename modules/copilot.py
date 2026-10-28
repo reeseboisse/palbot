@@ -970,7 +970,7 @@ RULES:
                     lines.append(f"**`{k}`** — {desc}\n  Default: *(built-in)*. Set to override, `none` to reset")
                 else:
                     lines.append(f"**`{k}`** — {desc}\n  Default: {default}")
-            lines.append(f"\nSettings are per-channel. Run `!claiconfig` in the channel you want to configure.")
+            lines.append("\nSettings are per-channel. Run `!claiconfig` in the channel you want to configure.")
             await ctx.send("\n".join(lines))
             return
 
@@ -1059,7 +1059,7 @@ RULES:
                         lines.append(f"**`{k}`** — {desc}\n  Default: *(built-in)*. Set to override, `none` to reset")
                     else:
                         lines.append(f"**`{k}`** — {desc}\n  Default: {default}")
-            lines.append(f"\nSettings are per-channel unless marked 🌐 (global). Run `!glmconfig` in the channel you want to configure.")
+            lines.append("\nSettings are per-channel unless marked 🌐 (global). Run `!glmconfig` in the channel you want to configure.")
             await ctx.send("\n".join(lines))
             return
 
@@ -1505,7 +1505,7 @@ RULES:
             caches = await self.ai_cache.list_caches(guild_id)
             stats = await self.ai_cache.get_stats(guild_id)
 
-            lines = [f"📊 **Claude AI Stats**\n"]
+            lines = ["📊 **Claude AI Stats**\n"]
 
             if caches:
                 cache_parts = []

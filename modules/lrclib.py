@@ -51,7 +51,7 @@ class Lyrics(commands.Cog):
                 except Exception as json_err:
                     error_text = await resp.text()
                     self.bot.logger.error(f"Failed to parse search response: {json_err}")
-                    await ctx.send(f"❌ **Invalid API Response**\nFailed to parse JSON from API.")
+                    await ctx.send("❌ **Invalid API Response**\nFailed to parse JSON from API.")
                     return
 
             # Check if any results found
@@ -99,7 +99,7 @@ class Lyrics(commands.Cog):
 
             # Optional: Add synced lyrics link
             if synced_lyrics:
-                output += f"\n\n*Synced lyrics available via LRCLIB*"
+                output += "\n\n*Synced lyrics available via LRCLIB*"
 
             filename = track_name.replace(" ", "_")
             data = io.BytesIO(output.encode('utf-8'))

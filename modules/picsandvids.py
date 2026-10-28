@@ -41,7 +41,7 @@ class Pics(commands.Cog):
         
         async with self.bot.session.get(url, params=params, headers=headers) as resp:
             if resp.status != 200:
-                print(f"brave image search ", resp.status)
+                print("brave image search ", resp.status)
                 print(await resp.read())
                 return
 
@@ -79,7 +79,7 @@ class Pics(commands.Cog):
         
         async with self.bot.session.get(url, params=params) as resp:
             if resp.status != 200:
-                print(f"google image search ", resp.status)
+                print("google image search ", resp.status)
                 print(await resp.read())
                 return
 
@@ -167,7 +167,7 @@ class Vids(commands.Cog):
         
         async with self.bot.session.get(url, params=params) as resp:
             if resp.status != 200:
-                print(f"!yt ", resp.status)
+                print("!yt ", resp.status)
                 print(await resp.read())
                 return
             data = await resp.json()
@@ -410,7 +410,7 @@ class Vids(commands.Cog):
                         print(f"Failed to load {audiourl} though this should have audio")
                     else:
                         if vidsize + int(resp.headers['Content-Length']) >= filesize:
-                            await ctx.send(f"Audio makes the video too big to upload so it's muted.")
+                            await ctx.send("Audio makes the video too big to upload so it's muted.")
                             audiodata = None
                         else: 
                             audiodata = await resp.read()

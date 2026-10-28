@@ -186,9 +186,9 @@ class Chat(commands.Cog):
     @commands.command(hidden=True, aliases=['onions'])
     async def ban(self, ctx):
         if ctx.invoked_with.lower() == "onions":
-            await ctx.message.reply(f"How about these onions. <:LEOKEK:803268251064729670>")
+            await ctx.message.reply("How about these onions. <:LEOKEK:803268251064729670>")
         else:
-            await ctx.message.reply(f"OK, you've been banned. <:LEOKEK:803268251064729670>")
+            await ctx.message.reply("OK, you've been banned. <:LEOKEK:803268251064729670>")
         try:
             await ctx.message.author.timeout(timedelta(minutes=1), reason="!ban")
         except Exception:

@@ -573,7 +573,7 @@ class Weather(commands.Cog):
             data = await resp.json()
             forecast = data['forecasts']
 
-        url = f"https://api.weather.com/v3/wx/observations/current"
+        url = "https://api.weather.com/v3/wx/observations/current"
         params = {"geocode": f'{loc.latitude},{loc.longitude}',
                 "units" : "e", "format" : "json", "language": "en-US",
                   "apiKey": key,
@@ -657,7 +657,7 @@ class Weather(commands.Cog):
         if not loc:
             return
 
-        url = f'https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/'
+        url = 'https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/'
         url += f'{loc.latitude},{loc.longitude}?key={key}'
         async with self.bot.session.get(url) as resp:
             data = await resp.json()

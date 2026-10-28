@@ -39,7 +39,7 @@ class TimePrompt(discord.ui.Modal, title="New reminder time"):
             await interaction.response.defer()
         else:
             await interaction.response.send_message(
-                f"Failed to parse new date / time. Push button again to try again", 
+                "Failed to parse new date / time. Push button again to try again", 
                 ephemeral=True
                 )
 
