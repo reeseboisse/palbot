@@ -8,6 +8,7 @@ import discord
 import pickle
 import os.path
 from itertools import cycle
+from utils.settings import setting
 
 # https://discordpy.readthedocs.io/en/stable/api.html#thread
 # look in to threads/parent channel
@@ -21,7 +22,6 @@ from itertools import cycle
 # parse safety ratings?
 # if so ignore negligible and maybe Low
 
-# change these to a bot config probably. Will need to change the chat_channel check for that.
 BOT_ADMIN_ROLE = "Bot Admin"
 
 def is_bot_admin():
@@ -32,8 +32,6 @@ def is_bot_admin():
         return any(role.name == BOT_ADMIN_ROLE for role in ctx.author.roles)
     return commands.check(predicate)
 
-
-allowed_channels = [985728639981211728, 1333677981322969149, 1337293879153791036]
 
 
 SAFETY = [
@@ -84,7 +82,7 @@ class Gemini(commands.Cog):
         self.keys = cycle(self.bot.config.gemini_keys)
         self._settings_db = None
 
-        for ch in allowed_channels:
+        for ch in setting(self.bot, "gemini_chat_channels"):
              self.load_chat(ch)
 
     def cog_unload(self):
@@ -164,12 +162,12 @@ class Gemini(commands.Cog):
     async def chat_channel(ctx, silent = False):
         if ctx.invoked_with == "help":
             return True
+        allowed_channels = setting(ctx.bot, "gemini_chat_channels")
         if isinstance(ctx.channel, discord.Thread) and ctx.channel.parent.id in allowed_channels:
             return True
-        if  (ctx.guild and ctx.guild.id == 124572142485504002) and ctx.channel.id not in allowed_channels:
-            # print("HERE")
+        if  (ctx.guild and ctx.guild.id == setting(ctx.bot, "home_guild_id")) and ctx.channel.id not in allowed_channels:
             if not silent:
-                msg = await ctx.reply(f"`chat only works in <#985728639981211728>. This message will self destruct.")
+                msg = await ctx.reply(f"`chat only works in <#{allowed_channels[0]}>. This message will self destruct.")
                 await asyncio.sleep(5)
                 await msg.delete()
             return False

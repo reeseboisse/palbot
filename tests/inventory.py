@@ -14,6 +14,7 @@ blocked, so it never touches real data or external services.
     python tests/inventory.py              # print the inventory as JSON
     python tests/inventory.py --update     # rewrite tests/snapshots/inventory.json
 """
+import ast
 import asyncio
 import contextlib
 import inspect
@@ -38,7 +39,12 @@ wotd_whitelist = []
 github_copilot_token_path = "data/github-copilot.token.json"
 github_copilot_auth_profile_path = "config/auth-profiles.json"
 
+# Optional keys (utils/settings.py) fall back to their defaults; others are stubbed.
+OPTIONAL = {optional!r}
+
 def __getattr__(name):
+    if name in OPTIONAL:
+        raise AttributeError(name)
     return "stub"
 '''
 
@@ -84,6 +90,16 @@ class _StubSession:
         self.closed = True
 
 
+def _optional_settings():
+    """Names of the optional keys in utils/settings.py, read without importing utils."""
+    tree = ast.parse((REPO / "utils" / "settings.py").read_text())
+    for node in tree.body:
+        if isinstance(node, ast.Assign) and any(
+                isinstance(t, ast.Name) and t.id == "DEFAULTS" for t in node.targets):
+            return ast.literal_eval(node.value).keys()
+    raise RuntimeError("DEFAULTS not found in utils/settings.py")
+
+
 def _make_sandbox():
     tmp = Path(tempfile.mkdtemp(prefix="palbot-inventory-"))
     for name in ("modules", "utils"):
@@ -91,7 +107,8 @@ def _make_sandbox():
     for name in ("data", "logfiles", "config"):
         (tmp / name).mkdir()
     (tmp / "config" / "__init__.py").write_text("")
-    (tmp / "config" / "config.py").write_text(STUB_CONFIG)
+    (tmp / "config" / "config.py").write_text(
+        STUB_CONFIG.replace("{optional!r}", repr(sorted(_optional_settings()))))
     # Trivia reads a prebuilt j-archive database it never creates itself.
     conn = sqlite3.connect(tmp / "data" / EXTERNAL_DB)
     conn.executescript(CLUES_SCHEMA)

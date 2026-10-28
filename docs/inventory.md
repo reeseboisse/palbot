@@ -116,11 +116,16 @@ Every key the code reads, as documented in `config/config.py.example`.
 `reddituser`, `redditpw`, `redditclient`, `redditsecret`, `gemini_keys`,
 `github_copilot_token_path`, `github_copilot_auth_profile_path`.
 
+Optional server-specific settings (see `utils/settings.py`). These were
+hardcoded upstream, and if they're left out the original values are used:
+`home_guild_id`, `sports_channel_id`, `gemini_chat_channels`,
+`brak_beef_user_id`.
+
 ## Prefix commands
 
 168 including subcommands. "Restrictions" are discord.py check predicates:
 `is_owner` is the bot owner, `is_bot_admin` is Copilot/Gemini admin,
-`has_any_role` is role-gated, and `Gemini.chat_channel` limits a command to a hardcoded channel allowlist in one guild (ID `124572142485504002`). Subcommands
+`has_any_role` is role-gated, and `Gemini.chat_channel` limits a command to the `gemini_chat_channels` in the `home_guild_id` guild. Subcommands
 also inherit their parent group's checks.
 
 ### Chat — `modules.chat`

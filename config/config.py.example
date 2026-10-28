@@ -76,3 +76,14 @@ gemini_keys = ["abc123"]
 github_copilot_token_path = "/app/data/github-copilot.token.json"
 # Auth profile stores the GitHub OAuth token (managed via !copilot-auth device flow)
 github_copilot_auth_profile_path = "/app/config/auth-profiles.json"
+
+# Server-specific settings. These are optional: if a key is left out, the
+# default in utils/settings.py (the original server's ID) is used.
+# The guild where the sports and Gemini channel restrictions apply
+home_guild_id = 124572142485504002
+# Sports channel: exempt from the global sports cooldown in the home guild
+sports_channel_id = 1243723119567310858
+# Gemini !chat channels; the first is the one users are pointed to
+gemini_chat_channels = [985728639981211728, 1333677981322969149, 1337293879153791036]
+# The user who gets boiled beef from !brak
+brak_beef_user_id = 167670602507747328

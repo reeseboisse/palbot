@@ -3,6 +3,7 @@ from discord.ext import commands
 import asyncio
 import random
 from statistics import mode, StatisticsError
+from utils.settings import setting
 import re
 
 
@@ -23,7 +24,7 @@ class Randomizers(commands.Cog):
     async def brak(self, ctx):
         """mmm chicken"""
         rand = random.randint(2, 10)
-        if ctx.author.id == 167670602507747328:
+        if ctx.author.id == setting(self.bot, "brak_beef_user_id"):
             output = f"{ctx.author.mention} gets {rand}lbs of boiled beef"
         else:
             output = f"{ctx.author.mention} gets {rand} boiled chickens"

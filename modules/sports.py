@@ -2,6 +2,7 @@ import discord
 from discord.ext import commands
 import asyncio
 from utils.time import HumanTime
+from utils.settings import setting
 import pytz
 import datetime
 
@@ -40,12 +41,13 @@ class Sports(commands.Cog):
              return True
         if ctx.invoked_with == "help":
             return True
-        if ctx.channel.guild.id != 124572142485504002:
+        if ctx.channel.guild.id != setting(self.bot, "home_guild_id"):
             return True
-        if ctx.channel.id == 1243723119567310858:
+        sports_channel = setting(self.bot, "sports_channel_id")
+        if ctx.channel.id == sports_channel:
             return True
         if ctx.invoked_with in self.SPORTS_CHAN_ONLY:
-            await ctx.send(f"`!{ctx.invoked_with}` is restricted to <#1243723119567310858>",
+            await ctx.send(f"`!{ctx.invoked_with}` is restricted to <#{sports_channel}>",
                            delete_after=5.0)
             return False
         now = datetime.datetime.now(datetime.UTC).timestamp()
