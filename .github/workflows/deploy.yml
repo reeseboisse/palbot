@@ -1,7 +1,7 @@
 name: Deploy Palbot
 on:
-  push:
-    branches: [ master ]
+  # Manual only until the fork's deploy target and secrets are configured
+  workflow_dispatch:
 
 jobs:
   deploy:
