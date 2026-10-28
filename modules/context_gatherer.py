@@ -4,11 +4,9 @@ This module provides shared context-gathering functionality for commands like !c
 """
 
 import aiohttp
-import asyncio
 import io
 import re
 import time
-from datetime import datetime
 
 try:
     from PIL import Image
@@ -90,7 +88,6 @@ class ContextGatherer:
         """
         if HAS_PIL:
             try:
-                from PIL import Image
                 img = Image.open(io.BytesIO(img_bytes))
                 w, h = img.size
                 return max(100, (w * h) // 750)

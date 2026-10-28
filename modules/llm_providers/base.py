@@ -4,7 +4,7 @@ Defines the interface that all providers must implement.
 """
 
 from abc import ABC, abstractmethod
-from typing import List, Dict, Tuple
+from typing import Dict, Tuple
 
 
 class LLMProvider(ABC):
@@ -17,7 +17,6 @@ class LLMProvider(ABC):
         Returns:
             tuple[str, str]: Authentication credentials
         """
-        pass
 
     @abstractmethod
     async def chat(self, payload: Dict) -> Dict:
@@ -29,7 +28,6 @@ class LLMProvider(ABC):
         Returns:
             dict: Response from API with 'choices' containing message content and usage info
         """
-        pass
 
     @abstractmethod
     def estimate_tokens(self, text: str) -> int:
@@ -41,7 +39,6 @@ class LLMProvider(ABC):
         Returns:
             int: Estimated token count
         """
-        pass
 
     @abstractmethod
     def calculate_cost(
@@ -62,7 +59,6 @@ class LLMProvider(ABC):
         Returns:
             float: Cost in USD
         """
-        pass
 
 
 # Token estimation utilities

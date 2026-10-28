@@ -1,11 +1,9 @@
 import discord
 from discord.ext import commands
-import csv
 from urllib.parse import quote as uriquote
 import json
 
 import xml.dom.minidom
-import base64
 from yarl import URL
 
 class News(commands.Cog):

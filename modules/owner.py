@@ -3,7 +3,6 @@ from discord import app_commands
 from pathlib import Path
 from importlib import reload
 import sys, traceback
-from utils.time import human_timedelta
 import logging
 import discord
 

@@ -5,9 +5,6 @@ from utils.paginator import Paginator
 import json
 from curl_cffi.requests import AsyncSession
 from bs4 import BeautifulSoup
-import html
-import re
-from datetime import datetime
 from yarl import URL
 from gql import Client, gql
 from gql.transport.aiohttp import AIOHTTPTransport

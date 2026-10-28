@@ -1,6 +1,5 @@
 import discord
 from discord.ext import tasks, commands
-from urllib.parse import quote as uriquote
 import html
 from utils.time import human_timedelta
 from datetime import datetime

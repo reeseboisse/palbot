@@ -1,7 +1,6 @@
 #from utils import ordinal
 import re
 from urllib.parse import quote as uriquote
-import asyncio
 from bs4 import BeautifulSoup
 from collections import OrderedDict
 from collections.abc import Mapping

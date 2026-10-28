@@ -3,7 +3,6 @@
 Supports OpenAI API-compatible endpoints (e.g., llama.cpp server, GLM-4.7 Flash).
 """
 
-import time
 from typing import Dict, Tuple
 from aiohttp import ClientSession
 

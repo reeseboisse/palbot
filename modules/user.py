@@ -2,7 +2,6 @@ import discord
 from discord import app_commands
 from discord.ext import commands
 import datetime
-import dateutil.parser
 from dateutil import relativedelta
 from utils.time import HumanTime
 import pytz
@@ -60,7 +59,6 @@ class User(commands.Cog):
     @commands.group(name="set", case_insensitive=True)
     async def _set (self, ctx):
         """Use '!help set' for more info. Lets you set user related information for convenience"""
-        pass
 
     @_set.command(name='location')
     async def _set_location(self, ctx, *, location: str):

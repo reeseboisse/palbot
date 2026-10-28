@@ -1,11 +1,7 @@
-import asyncio
 import discord
 from discord.ext import commands
-import re
-import xml.dom.minidom
-from urllib.parse import quote as uriquote
 import pytz
-from datetime import datetime, timedelta
+from datetime import datetime
 from utils.time import human_timedelta
 
 #TODO: yr.no

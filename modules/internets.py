@@ -3,7 +3,6 @@ from discord.ext import commands
 from urllib.parse import quote as uriquote
 from utils.paginator import Paginator
 import json
-import asyncio
 import re
 from datetime import datetime
 import html2text

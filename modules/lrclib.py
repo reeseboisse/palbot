@@ -5,7 +5,6 @@ import discord
 
 import re
 from discord.ext import commands
-from urllib.parse import quote as uriquote
 
 class Lyrics(commands.Cog):
     def __init__(self, bot):

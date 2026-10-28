@@ -15,7 +15,6 @@ class Strava(commands.Cog):
 
     async def cog_unload(self):
         self.bot.tree.remove_command(self.ctx_menu)
-        pass
 
     async def strava_ctx(self, interaction: discord.Interaction, user: discord.User):
         userinfo = interaction.client.utils.AuthorInfo(user)

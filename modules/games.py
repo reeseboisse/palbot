@@ -1,6 +1,5 @@
 import discord
 from discord.ext import commands
-import asyncio
 import re
 from urllib.parse import quote as uriquote
 import datetime

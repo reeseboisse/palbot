@@ -14,7 +14,6 @@ import io
 import logging
 import re
 import tempfile
-import time
 from collections import defaultdict
 
 import discord

@@ -1,6 +1,5 @@
 from discord.ext import commands
 #from .utils import checks
-import aiohttp
 import json
 import discord
 from lxml import etree

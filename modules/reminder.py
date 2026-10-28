@@ -3,7 +3,7 @@ import discord
 from discord import app_commands
 import asyncio
 import aiosqlite
-from datetime import datetime, timezone
+from datetime import datetime
 from dataclasses import dataclass
 import dateparser
 from zoneinfo import ZoneInfo

@@ -1,6 +1,4 @@
-import discord
 from discord.ext import commands
-import asyncio
 import random
 from statistics import mode, StatisticsError
 from utils.settings import setting

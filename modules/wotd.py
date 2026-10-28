@@ -4,7 +4,6 @@ import asyncio
 import random
 from utils.time import human_timedelta
 import aiosqlite
-import subprocess
 from datetime import datetime,timedelta, timezone
 import re
 
