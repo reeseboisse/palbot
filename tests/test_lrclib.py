@@ -6,6 +6,9 @@ import sys
 import asyncio
 from urllib.parse import quote
 
+import pytest
+
+@pytest.mark.network
 async def test_lrclib_api():
     """Test the LRCLIB API directly"""
     from aiohttp import ClientSession

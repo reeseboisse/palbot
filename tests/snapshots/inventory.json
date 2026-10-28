@@ -1,0 +1,2808 @@
+{
+  "bot": {
+    "command_prefix": [
+      "!"
+    ],
+    "case_insensitive": true,
+    "description": "https://github.com/iamsix/palbot/ by six",
+    "help_command": "DefaultHelpCommand",
+    "intents": 53608447,
+    "listeners": [
+      "on_command_error",
+      "on_message",
+      "on_message_delete",
+      "on_message_edit",
+      "on_ready"
+    ]
+  },
+  "extensions": [
+    "modules.ai_cache",
+    "modules.chat",
+    "modules.context_gatherer",
+    "modules.copilot",
+    "modules.finance",
+    "modules.food",
+    "modules.games",
+    "modules.gemini",
+    "modules.internets",
+    "modules.logger",
+    "modules.lounge",
+    "modules.lrclib",
+    "modules.media",
+    "modules.news",
+    "modules.owner",
+    "modules.persona",
+    "modules.picsandvids",
+    "modules.randomizers",
+    "modules.reminder",
+    "modules.sports",
+    "modules.stars",
+    "modules.strava",
+    "modules.tictactoe",
+    "modules.trivia",
+    "modules.twitter",
+    "modules.user",
+    "modules.voice_tts",
+    "modules.weather",
+    "modules.worldcup",
+    "modules.wotd"
+  ],
+  "load_failures": [],
+  "cogs": {
+    "Chat": {
+      "module": "modules.chat",
+      "listeners": [
+        "on_message:on_message",
+        "on_reaction_add:on_reaction_add"
+      ],
+      "loops": {
+        "check_userthings": {
+          "seconds": 0.0,
+          "minutes": 60.0,
+          "hours": 0.0,
+          "time": null,
+          "count": null,
+          "started_on_load": false
+        }
+      }
+    },
+    "Copilot": {
+      "module": "modules.copilot",
+      "listeners": [],
+      "loops": {}
+    },
+    "Finance": {
+      "module": "modules.finance",
+      "listeners": [],
+      "loops": {}
+    },
+    "Food": {
+      "module": "modules.food",
+      "listeners": [],
+      "loops": {}
+    },
+    "Games": {
+      "module": "modules.games",
+      "listeners": [],
+      "loops": {}
+    },
+    "Gemini": {
+      "module": "modules.gemini",
+      "listeners": [
+        "on_message:on_message"
+      ],
+      "loops": {}
+    },
+    "InfiniteTicTacToe": {
+      "module": "modules.tictactoe",
+      "listeners": [],
+      "loops": {}
+    },
+    "Internets": {
+      "module": "modules.internets",
+      "listeners": [],
+      "loops": {}
+    },
+    "Logger": {
+      "module": "modules.logger",
+      "listeners": [
+        "on_guild_channel_update:on_guild_channel_update",
+        "on_member_update:on_member_update",
+        "on_message:on_message",
+        "on_message_delete:on_message_delete",
+        "on_message_edit:on_message_edit",
+        "on_reaction_add:on_reaction_add"
+      ],
+      "loops": {}
+    },
+    "Lounge<C++>": {
+      "module": "modules.lounge",
+      "listeners": [],
+      "loops": {}
+    },
+    "Lyrics": {
+      "module": "modules.lrclib",
+      "listeners": [],
+      "loops": {}
+    },
+    "Media": {
+      "module": "modules.media",
+      "listeners": [],
+      "loops": {}
+    },
+    "News": {
+      "module": "modules.news",
+      "listeners": [],
+      "loops": {}
+    },
+    "Owner Commands": {
+      "module": "modules.owner",
+      "listeners": [],
+      "loops": {}
+    },
+    "Persona": {
+      "module": "modules.persona",
+      "listeners": [
+        "on_ready:on_ready"
+      ],
+      "loops": {}
+    },
+    "Pics": {
+      "module": "modules.picsandvids",
+      "listeners": [],
+      "loops": {}
+    },
+    "Randomizers": {
+      "module": "modules.randomizers",
+      "listeners": [],
+      "loops": {}
+    },
+    "Reminder": {
+      "module": "modules.reminder",
+      "listeners": [],
+      "loops": {
+        "check_timers": {
+          "seconds": 0.0,
+          "minutes": 1440.0,
+          "hours": 0.0,
+          "time": null,
+          "count": null,
+          "started_on_load": false
+        }
+      }
+    },
+    "Sports": {
+      "module": "modules.sports",
+      "listeners": [],
+      "loops": {}
+    },
+    "Stars": {
+      "module": "modules.stars",
+      "listeners": [
+        "on_reaction_add:on_reaction_add"
+      ],
+      "loops": {}
+    },
+    "Strava": {
+      "module": "modules.strava",
+      "listeners": [],
+      "loops": {}
+    },
+    "Trivia": {
+      "module": "modules.trivia",
+      "listeners": [
+        "on_message:on_message"
+      ],
+      "loops": {}
+    },
+    "Twitter": {
+      "module": "modules.twitter",
+      "listeners": [],
+      "loops": {
+        "tweet_subscriptions": {
+          "seconds": 0.0,
+          "minutes": 1.0,
+          "hours": 0.0,
+          "time": null,
+          "count": null,
+          "started_on_load": false
+        }
+      }
+    },
+    "UsefulEvents": {
+      "module": "modules.owner",
+      "listeners": [
+        "on_reaction_add:on_reaction",
+        "on_reaction_remove:on_reaction"
+      ],
+      "loops": {}
+    },
+    "User": {
+      "module": "modules.user",
+      "listeners": [],
+      "loops": {}
+    },
+    "Vids": {
+      "module": "modules.picsandvids",
+      "listeners": [
+        "on_message:on_message"
+      ],
+      "loops": {}
+    },
+    "VoiceTTS": {
+      "module": "modules.voice_tts",
+      "listeners": [
+        "on_message:on_message",
+        "on_voice_state_update:on_voice_state_update"
+      ],
+      "loops": {}
+    },
+    "Weather": {
+      "module": "modules.weather",
+      "listeners": [],
+      "loops": {}
+    },
+    "WorldCup": {
+      "module": "modules.worldcup",
+      "listeners": [],
+      "loops": {}
+    },
+    "Wotd": {
+      "module": "modules.wotd",
+      "listeners": [
+        "on_message:on_message"
+      ],
+      "loops": {}
+    }
+  },
+  "prefix_commands": {
+    "8=D": {
+      "cog": "Randomizers",
+      "aliases": [
+        "udp"
+      ],
+      "signature": "",
+      "help": null,
+      "brief": null,
+      "hidden": false,
+      "enabled": true,
+      "checks": [],
+      "cooldown": null,
+      "max_concurrency": null,
+      "callback": "modules.randomizers.Randomizers.eightd"
+    },
+    "addcmd": {
+      "cog": "Chat",
+      "aliases": [],
+      "signature": "<cmd> <output>",
+      "help": "Adds a custom command to the bot that will output whatever is in the <output> field\n\nAttributes\n-----------\ncmd: str\n    The command to add. such as `lol` - No need to add the ! \noutput: str\n    The output of the command. Can be a URL if you want it to show an image/link/etc",
+      "brief": null,
+      "hidden": false,
+      "enabled": true,
+      "checks": [],
+      "cooldown": null,
+      "max_concurrency": null,
+      "callback": "modules.chat.Chat.addcmd"
+    },
+    "age": {
+      "cog": "User",
+      "aliases": [],
+      "signature": "[day]",
+      "help": "Show your age if stored, or optionally return the time from [day] to now",
+      "brief": null,
+      "hidden": false,
+      "enabled": true,
+      "checks": [],
+      "cooldown": null,
+      "max_concurrency": null,
+      "callback": "modules.user.User.age"
+    },
+    "ai": {
+      "cog": "Gemini",
+      "aliases": [],
+      "signature": "<ask>",
+      "help": "Ask gemini AI a question",
+      "brief": null,
+      "hidden": false,
+      "enabled": true,
+      "checks": [],
+      "cooldown": null,
+      "max_concurrency": null,
+      "callback": "modules.gemini.Gemini.ai"
+    },
+    "aiconfig": {
+      "cog": "Gemini",
+      "aliases": [],
+      "signature": "[key] [value]",
+      "help": "Enable or disable !ai and !sai per-channel (Bot Admin only).\n\n!aiconfig              \u2014 show current setting for this channel\n!aiconfig enabled on   \u2014 enable !ai and !sai in this channel\n!aiconfig enabled off  \u2014 disable !ai and !sai in this channel",
+      "brief": null,
+      "hidden": false,
+      "enabled": true,
+      "checks": [
+        "is_bot_admin.<locals>.predicate"
+      ],
+      "cooldown": null,
+      "max_concurrency": null,
+      "callback": "modules.gemini.Gemini.aiconfig"
+    },
+    "aistats": {
+      "cog": "Gemini",
+      "aliases": [],
+      "signature": "[channel]",
+      "help": null,
+      "brief": null,
+      "hidden": true,
+      "enabled": true,
+      "checks": [],
+      "cooldown": null,
+      "max_concurrency": null,
+      "callback": "modules.gemini.Gemini.aistats"
+    },
+    "aqi": {
+      "cog": "Weather",
+      "aliases": [],
+      "signature": "[location]",
+      "help": "Show the air quality index of <location>\nCan be invoked without location if you have a set location",
+      "brief": null,
+      "hidden": false,
+      "enabled": true,
+      "checks": [],
+      "cooldown": null,
+      "max_concurrency": null,
+      "callback": "modules.weather.Weather.get_aqi"
+    },
+    "ba": {
+      "cog": "Food",
+      "aliases": [],
+      "signature": "<beer>",
+      "help": "Search for a beeradvocate page",
+      "brief": null,
+      "hidden": false,
+      "enabled": true,
+      "checks": [],
+      "cooldown": null,
+      "max_concurrency": null,
+      "callback": "modules.food.Food.advocate_beer"
+    },
+    "ban": {
+      "cog": "Chat",
+      "aliases": [
+        "onions"
+      ],
+      "signature": "",
+      "help": null,
+      "brief": null,
+      "hidden": true,
+      "enabled": true,
+      "checks": [],
+      "cooldown": null,
+      "max_concurrency": null,
+      "callback": "modules.chat.Chat.ban"
+    },
+    "bbnet": {
+      "cog": "Randomizers",
+      "aliases": [],
+      "signature": "",
+      "help": "looololol",
+      "brief": null,
+      "hidden": false,
+      "enabled": true,
+      "checks": [],
+      "cooldown": null,
+      "max_concurrency": null,
+      "callback": "modules.randomizers.Randomizers.bbnet"
+    },
+    "beats": {
+      "cog": "User",
+      "aliases": [],
+      "signature": "",
+      "help": "https://beats.wiki/",
+      "brief": null,
+      "hidden": false,
+      "enabled": true,
+      "checks": [],
+      "cooldown": null,
+      "max_concurrency": null,
+      "callback": "modules.user.User.beats"
+    },
+    "beer": {
+      "cog": "Food",
+      "aliases": [],
+      "signature": "<beername>",
+      "help": "Search Untappd for a beer to return ratings, alcohol, etc",
+      "brief": null,
+      "hidden": false,
+      "enabled": true,
+      "checks": [],
+      "cooldown": null,
+      "max_concurrency": null,
+      "callback": "modules.food.Food.untappd_beer_search"
+    },
+    "bimage": {
+      "cog": "Pics",
+      "aliases": [],
+      "signature": "<search>",
+      "help": "Google Image Search and return the results in a switchable embed",
+      "brief": null,
+      "hidden": false,
+      "enabled": true,
+      "checks": [],
+      "cooldown": null,
+      "max_concurrency": null,
+      "callback": "modules.picsandvids.Pics.bimage"
+    },
+    "bnews": {
+      "cog": "News",
+      "aliases": [],
+      "signature": "[query=cats]",
+      "help": "Search bing news for a specific topic",
+      "brief": null,
+      "hidden": false,
+      "enabled": true,
+      "checks": [],
+      "cooldown": null,
+      "max_concurrency": null,
+      "callback": "modules.news.News.bing_news"
+    },
+    "book": {
+      "cog": "Media",
+      "aliases": [
+        "gr"
+      ],
+      "signature": "<books>",
+      "help": "Find a <book> on openlibrary.org and return some rating info and a link",
+      "brief": null,
+      "hidden": false,
+      "enabled": true,
+      "checks": [],
+      "cooldown": null,
+      "max_concurrency": null,
+      "callback": "modules.media.Media.openlibrary"
+    },
+    "bot": {
+      "cog": "Chat",
+      "aliases": [],
+      "signature": "<line>",
+      "help": "Decide things",
+      "brief": null,
+      "hidden": false,
+      "enabled": true,
+      "checks": [],
+      "cooldown": null,
+      "max_concurrency": null,
+      "callback": "modules.chat.Chat.decide"
+    },
+    "bounce": {
+      "cog": "User",
+      "aliases": [],
+      "signature": "",
+      "help": "Make it bounce, cat style",
+      "brief": null,
+      "hidden": false,
+      "enabled": true,
+      "checks": [],
+      "cooldown": null,
+      "max_concurrency": null,
+      "callback": "modules.user.User.bounce"
+    },
+    "brak": {
+      "cog": "Randomizers",
+      "aliases": [],
+      "signature": "",
+      "help": "mmm chicken",
+      "brief": null,
+      "hidden": false,
+      "enabled": true,
+      "checks": [],
+      "cooldown": null,
+      "max_concurrency": null,
+      "callback": "modules.randomizers.Randomizers.brak"
+    },
+    "bsky": {
+      "cog": "Twitter",
+      "aliases": [],
+      "signature": "<nick>",
+      "help": "Testing bluesky API. Can show the latest bluesky of a user",
+      "brief": null,
+      "hidden": false,
+      "enabled": true,
+      "checks": [],
+      "cooldown": null,
+      "max_concurrency": null,
+      "callback": "modules.twitter.Twitter.bsky"
+    },
+    "cactus": {
+      "cog": "Randomizers",
+      "aliases": [],
+      "signature": "",
+      "help": "bleeeh",
+      "brief": null,
+      "hidden": false,
+      "enabled": true,
+      "checks": [],
+      "cooldown": null,
+      "max_concurrency": null,
+      "callback": "modules.randomizers.Randomizers.cactus"
+    },
+    "chat": {
+      "cog": "Gemini",
+      "aliases": [],
+      "signature": "<line>",
+      "help": null,
+      "brief": null,
+      "hidden": true,
+      "enabled": true,
+      "checks": [
+        "Gemini.chat_channel"
+      ],
+      "cooldown": null,
+      "max_concurrency": null,
+      "callback": "modules.gemini.Gemini.chat"
+    },
+    "checkwotd": {
+      "cog": "Wotd",
+      "aliases": [],
+      "signature": "",
+      "help": "Debug function shows you the current wotd, who set it, and when",
+      "brief": null,
+      "hidden": true,
+      "enabled": true,
+      "checks": [
+        "is_owner.<locals>.predicate"
+      ],
+      "cooldown": null,
+      "max_concurrency": null,
+      "callback": "modules.wotd.Wotd.checkwotd"
+    },
+    "clai": {
+      "cog": "Copilot",
+      "aliases": [],
+      "signature": "<ask>",
+      "help": "Ask Claude Opus 4.5 via GitHub Copilot API (with compacted channel + user context)",
+      "brief": null,
+      "hidden": false,
+      "enabled": true,
+      "checks": [],
+      "cooldown": null,
+      "max_concurrency": null,
+      "callback": "modules.copilot.Copilot.clai"
+    },
+    "clai-acl": {
+      "cog": "Copilot",
+      "aliases": [],
+      "signature": "[action] [member]",
+      "help": "Manage AI command access list. !clai-acl on/off/add/remove/list",
+      "brief": null,
+      "hidden": false,
+      "enabled": true,
+      "checks": [
+        "is_bot_admin.<locals>.predicate"
+      ],
+      "cooldown": null,
+      "max_concurrency": null,
+      "callback": "modules.copilot.Copilot.clai_acl"
+    },
+    "claiconfig": {
+      "cog": "Copilot",
+      "aliases": [],
+      "signature": "[key] [value]",
+      "help": "Show or change AI compaction settings (Bot Admin only)",
+      "brief": null,
+      "hidden": false,
+      "enabled": true,
+      "checks": [
+        "is_bot_admin.<locals>.predicate"
+      ],
+      "cooldown": null,
+      "max_concurrency": null,
+      "callback": "modules.copilot.Copilot.claiconfig"
+    },
+    "claihelp": {
+      "cog": "Copilot",
+      "aliases": [],
+      "signature": "",
+      "help": "Show all AI commands and what they do.",
+      "brief": null,
+      "hidden": false,
+      "enabled": true,
+      "checks": [],
+      "cooldown": null,
+      "max_concurrency": null,
+      "callback": "modules.copilot.Copilot.claihelp"
+    },
+    "claipersona": {
+      "cog": "Persona",
+      "aliases": [],
+      "signature": "[action] [args]",
+      "help": "Manage persona commands (Bot Admin only).\n\n!claipersona create <name> @user [--tokens N] [--provider copilot|glm]\n!claipersona delete <name>\n!claipersona list\n!claipersona info <name>",
+      "brief": null,
+      "hidden": false,
+      "enabled": true,
+      "checks": [],
+      "cooldown": null,
+      "max_concurrency": null,
+      "callback": "modules.persona.Persona.claipersona"
+    },
+    "claireset": {
+      "cog": "Copilot",
+      "aliases": [],
+      "signature": "[scope]",
+      "help": "Nuke compaction cache and immediately rebuild (owner only)\n\n!claireset       \u2014 rebuild this channel\n!claireset all    \u2014 rebuild all cached channels",
+      "brief": null,
+      "hidden": false,
+      "enabled": true,
+      "checks": [
+        "is_bot_admin.<locals>.predicate"
+      ],
+      "cooldown": null,
+      "max_concurrency": null,
+      "callback": "modules.copilot.Copilot.claireset"
+    },
+    "claistatus": {
+      "cog": "Copilot",
+      "aliases": [],
+      "signature": "[channel]",
+      "help": "Show AI usage stats. !claistatus for server-wide, !claistatus #channel for detail.",
+      "brief": null,
+      "hidden": false,
+      "enabled": true,
+      "checks": [],
+      "cooldown": null,
+      "max_concurrency": null,
+      "callback": "modules.copilot.Copilot.claistatus"
+    },
+    "claisummary": {
+      "cog": "Copilot",
+      "aliases": [],
+      "signature": "[channel]",
+      "help": "Show the current compaction summary for a channel.\n\n!claisummary          \u2014 this channel\n!claisummary #channel \u2014 specific channel",
+      "brief": null,
+      "hidden": false,
+      "enabled": true,
+      "checks": [
+        "is_bot_admin.<locals>.predicate"
+      ],
+      "cooldown": null,
+      "max_concurrency": null,
+      "callback": "modules.copilot.Copilot.claisummary"
+    },
+    "claiuserprompt": {
+      "cog": "Copilot",
+      "aliases": [],
+      "signature": "[target] [prompt]",
+      "help": "Set per-user system prompt (Bot Admin only).\n!claiuserprompt @user <prompt> \u2014 set for this channel\n!claiuserprompt @user #channel <prompt> \u2014 set for a specific channel\n!claiuserprompt @user global <prompt> \u2014 set server-wide\n!claiuserprompt @user clear \u2014 remove prompt\n!claiuserprompt @user \u2014 view prompt\n!claiuserprompt list \u2014 show all",
+      "brief": null,
+      "hidden": false,
+      "enabled": true,
+      "checks": [],
+      "cooldown": null,
+      "max_concurrency": null,
+      "callback": "modules.copilot.Copilot.claiuserprompt"
+    },
+    "coin": {
+      "cog": "Finance",
+      "aliases": [],
+      "signature": "<line>",
+      "help": "Try to lookup a cryptocoin with yahoo finance",
+      "brief": null,
+      "hidden": false,
+      "enabled": true,
+      "checks": [],
+      "cooldown": null,
+      "max_concurrency": null,
+      "callback": "modules.finance.Finance.coin"
+    },
+    "coliru": {
+      "cog": "Lounge<C++>",
+      "aliases": [],
+      "signature": "<code>",
+      "help": "Compiles code via Coliru.\n\nYou have to pass in a code block with the language syntax\neither set to one of these:\n\n- cpp\n- c\n- python\n- py\n- haskell\n\nAnything else isn't supported. The C++ compiler uses g++ -std=c++14.\n\nThe python support is now 3.5.2.\n\nPlease don't spam this for Stacked's sake.",
+      "brief": null,
+      "hidden": false,
+      "enabled": true,
+      "checks": [],
+      "cooldown": null,
+      "max_concurrency": null,
+      "callback": "modules.lounge.Lounge.coliru"
+    },
+    "copilot-auth": {
+      "cog": "Copilot",
+      "aliases": [],
+      "signature": "",
+      "help": "Start GitHub device code flow to authenticate Copilot (Bot Admin only).\n\nDisplays a code and URL. Open the URL in a browser, enter the code,\nand authorize the app. The bot will detect authorization automatically.",
+      "brief": null,
+      "hidden": false,
+      "enabled": true,
+      "checks": [
+        "is_bot_admin.<locals>.predicate"
+      ],
+      "cooldown": null,
+      "max_concurrency": null,
+      "callback": "modules.copilot.Copilot.copilot_auth"
+    },
+    "copilot-auth-status": {
+      "cog": "Copilot",
+      "aliases": [],
+      "signature": "",
+      "help": "Check current Copilot authentication status (Bot Admin only).",
+      "brief": null,
+      "hidden": false,
+      "enabled": true,
+      "checks": [
+        "is_bot_admin.<locals>.predicate"
+      ],
+      "cooldown": null,
+      "max_concurrency": null,
+      "callback": "modules.copilot.Copilot.copilot_auth_status"
+    },
+    "copilot-deauth": {
+      "cog": "Copilot",
+      "aliases": [],
+      "signature": "",
+      "help": "Remove stored Copilot credentials (Bot Admin only).",
+      "brief": null,
+      "hidden": false,
+      "enabled": true,
+      "checks": [
+        "is_bot_admin.<locals>.predicate"
+      ],
+      "cooldown": null,
+      "max_concurrency": null,
+      "callback": "modules.copilot.Copilot.copilot_deauth"
+    },
+    "cpp": {
+      "cog": "Lounge<C++>",
+      "aliases": [],
+      "signature": "<query>",
+      "help": "Search something on cppreference",
+      "brief": null,
+      "hidden": false,
+      "enabled": true,
+      "checks": [],
+      "cooldown": null,
+      "max_concurrency": null,
+      "callback": "modules.lounge.Lounge.cpp"
+    },
+    "cs2": {
+      "cog": "Games",
+      "aliases": [],
+      "signature": "[date]",
+      "help": "Show current pro cs2 matches",
+      "brief": null,
+      "hidden": false,
+      "enabled": true,
+      "checks": [],
+      "cooldown": null,
+      "max_concurrency": null,
+      "callback": "modules.games.Games.cs2"
+    },
+    "dbgchat": {
+      "cog": "Gemini",
+      "aliases": [],
+      "signature": "",
+      "help": null,
+      "brief": null,
+      "hidden": true,
+      "enabled": true,
+      "checks": [],
+      "cooldown": null,
+      "max_concurrency": null,
+      "callback": "modules.gemini.Gemini.dbgchat"
+    },
+    "delcmd": {
+      "cog": "Chat",
+      "aliases": [],
+      "signature": "<cmd>",
+      "help": null,
+      "brief": null,
+      "hidden": false,
+      "enabled": true,
+      "checks": [
+        "has_any_role.<locals>.predicate"
+      ],
+      "cooldown": null,
+      "max_concurrency": null,
+      "callback": "modules.chat.Chat.delcmd"
+    },
+    "describecommand": {
+      "cog": "Chat",
+      "aliases": [],
+      "signature": "<command> <description>",
+      "help": "Describes the custom command\n\nAttributes\n-----------\ncmd: str\n    The command to add. such as `lol` - No need to add the ! \ndescription: str\n    The general description of what is in the command",
+      "brief": null,
+      "hidden": true,
+      "enabled": true,
+      "checks": [],
+      "cooldown": null,
+      "max_concurrency": null,
+      "callback": "modules.chat.Chat.describecommand"
+    },
+    "developers": {
+      "cog": "Randomizers",
+      "aliases": [],
+      "signature": "",
+      "help": "Design dynamic development strategies",
+      "brief": null,
+      "hidden": false,
+      "enabled": true,
+      "checks": [],
+      "cooldown": null,
+      "max_concurrency": null,
+      "callback": "modules.randomizers.Randomizers.development_generator"
+    },
+    "die": {
+      "cog": "Owner Commands",
+      "aliases": [],
+      "signature": "",
+      "help": null,
+      "brief": null,
+      "hidden": true,
+      "enabled": true,
+      "checks": [
+        "is_owner.<locals>.predicate"
+      ],
+      "cooldown": null,
+      "max_concurrency": null,
+      "callback": "modules.owner.OwnerCog.die"
+    },
+    "drink": {
+      "cog": "Food",
+      "aliases": [],
+      "signature": "[drink]",
+      "help": "Search for a cocktail recipe",
+      "brief": null,
+      "hidden": false,
+      "enabled": true,
+      "checks": [],
+      "cooldown": null,
+      "max_concurrency": null,
+      "callback": "modules.food.Food.drink"
+    },
+    "error": {
+      "cog": "Randomizers",
+      "aliases": [],
+      "signature": "",
+      "help": "Error: Help Message Concatination Error",
+      "brief": null,
+      "hidden": false,
+      "enabled": true,
+      "checks": [],
+      "cooldown": null,
+      "max_concurrency": null,
+      "callback": "modules.randomizers.Randomizers.error_generator"
+    },
+    "find": {
+      "cog": "Chat",
+      "aliases": [],
+      "signature": "<find>",
+      "help": "Find a custom command\n\nAttributes\n-----------\nfind: str\n    What to search for in the cmmand name or description",
+      "brief": null,
+      "hidden": false,
+      "enabled": true,
+      "checks": [],
+      "cooldown": null,
+      "max_concurrency": null,
+      "callback": "modules.chat.Chat.find"
+    },
+    "fruits": {
+      "cog": "Chat",
+      "aliases": [],
+      "signature": "",
+      "help": "The great fruit poll",
+      "brief": null,
+      "hidden": false,
+      "enabled": true,
+      "checks": [],
+      "cooldown": null,
+      "max_concurrency": null,
+      "callback": "modules.chat.Chat.fruits"
+    },
+    "glm": {
+      "cog": "Copilot",
+      "aliases": [],
+      "signature": "<ask>",
+      "help": "Ask using GLM via OpenAI-compatible API with context",
+      "brief": null,
+      "hidden": false,
+      "enabled": true,
+      "checks": [],
+      "cooldown": null,
+      "max_concurrency": null,
+      "callback": "modules.copilot.Copilot.glm"
+    },
+    "glmconfig": {
+      "cog": "Copilot",
+      "aliases": [],
+      "signature": "[key] [value]",
+      "help": "Show or change GLM settings (Bot Admin only)",
+      "brief": null,
+      "hidden": false,
+      "enabled": true,
+      "checks": [
+        "is_bot_admin.<locals>.predicate"
+      ],
+      "cooldown": null,
+      "max_concurrency": null,
+      "callback": "modules.copilot.Copilot.glmconfig"
+    },
+    "google": {
+      "cog": "Internets",
+      "aliases": [
+        "gwiki"
+      ],
+      "signature": "<searchterm>",
+      "help": "Attempts to use the google search snippet to find specific sections on wikipedia (it's not very good at it)",
+      "brief": null,
+      "hidden": false,
+      "enabled": true,
+      "checks": [],
+      "cooldown": null,
+      "max_concurrency": null,
+      "callback": "modules.internets.Internets.google"
+    },
+    "help": {
+      "cog": null,
+      "aliases": [],
+      "signature": "[command]",
+      "help": "Shows this message",
+      "brief": null,
+      "hidden": false,
+      "enabled": true,
+      "checks": [],
+      "cooldown": null,
+      "max_concurrency": null,
+      "callback": "discord.ext.commands.help.HelpCommand.command_callback"
+    },
+    "hint": {
+      "cog": "Trivia",
+      "aliases": [],
+      "signature": "",
+      "help": "Show a hint for the current question\nIt will also forefit the time allotted between the hints",
+      "brief": null,
+      "hidden": false,
+      "enabled": true,
+      "checks": [],
+      "cooldown": null,
+      "max_concurrency": null,
+      "callback": "modules.trivia.Trivia.show_hint"
+    },
+    "image": {
+      "cog": "Pics",
+      "aliases": [
+        "gif",
+        "pic"
+      ],
+      "signature": "<search>",
+      "help": "Google Image Search and return the results in a switchable embed",
+      "brief": null,
+      "hidden": false,
+      "enabled": true,
+      "checks": [],
+      "cooldown": null,
+      "max_concurrency": null,
+      "callback": "modules.picsandvids.Pics.gimage"
+    },
+    "imdb": {
+      "cog": "Media",
+      "aliases": [],
+      "signature": "<movie_name>",
+      "help": "Search for a movie or TV show on IMDB to return some info",
+      "brief": null,
+      "hidden": false,
+      "enabled": true,
+      "checks": [],
+      "cooldown": null,
+      "max_concurrency": null,
+      "callback": "modules.media.Media.imdb"
+    },
+    "infotest": {
+      "cog": "Owner Commands",
+      "aliases": [],
+      "signature": "[uid]",
+      "help": null,
+      "brief": null,
+      "hidden": true,
+      "enabled": true,
+      "checks": [],
+      "cooldown": null,
+      "max_concurrency": null,
+      "callback": "modules.owner.OwnerCog.infotest"
+    },
+    "kexp": {
+      "cog": "Twitter",
+      "aliases": [],
+      "signature": "",
+      "help": "show what's playing on KEXP",
+      "brief": null,
+      "hidden": true,
+      "enabled": true,
+      "checks": [],
+      "cooldown": null,
+      "max_concurrency": null,
+      "callback": "modules.twitter.Twitter.kexp"
+    },
+    "lasttweet": {
+      "cog": "Twitter",
+      "aliases": [],
+      "signature": "<handle>",
+      "help": "Show the last tweet of a twitter user",
+      "brief": null,
+      "hidden": true,
+      "enabled": true,
+      "checks": [],
+      "cooldown": null,
+      "max_concurrency": null,
+      "callback": "modules.twitter.Twitter.last_tweet"
+    },
+    "listenall": {
+      "cog": "Gemini",
+      "aliases": [],
+      "signature": "",
+      "help": null,
+      "brief": null,
+      "hidden": true,
+      "enabled": true,
+      "checks": [],
+      "cooldown": null,
+      "max_concurrency": null,
+      "callback": "modules.gemini.Gemini.listenall"
+    },
+    "load": {
+      "cog": "Owner Commands",
+      "aliases": [],
+      "signature": "<cog>",
+      "help": "Command which Loads a Module.\nRemember to use dot path. e.g: cogs.owner",
+      "brief": null,
+      "hidden": true,
+      "enabled": true,
+      "checks": [
+        "is_owner.<locals>.predicate"
+      ],
+      "cooldown": null,
+      "max_concurrency": null,
+      "callback": "modules.owner.OwnerCog._load"
+    },
+    "loglevel": {
+      "cog": "Owner Commands",
+      "aliases": [],
+      "signature": "<level>",
+      "help": null,
+      "brief": null,
+      "hidden": true,
+      "enabled": true,
+      "checks": [
+        "is_owner.<locals>.predicate"
+      ],
+      "cooldown": null,
+      "max_concurrency": null,
+      "callback": "modules.owner.OwnerCog.loglevel"
+    },
+    "lyrics": {
+      "cog": "Lyrics",
+      "aliases": [],
+      "signature": "<query>",
+      "help": "Search for song lyrics using LRCLIB API\n\nUsage:\n    !lyrics <song>",
+      "brief": null,
+      "hidden": false,
+      "enabled": true,
+      "checks": [],
+      "cooldown": null,
+      "max_concurrency": null,
+      "callback": "modules.lrclib.Lyrics.lyrics"
+    },
+    "mba": {
+      "cog": "Randomizers",
+      "aliases": [],
+      "signature": "",
+      "help": "Actualize Visionary Phrases",
+      "brief": null,
+      "hidden": false,
+      "enabled": true,
+      "checks": [],
+      "cooldown": null,
+      "max_concurrency": null,
+      "callback": "modules.randomizers.Randomizers.mba_generator"
+    },
+    "mc": {
+      "cog": "Media",
+      "aliases": [],
+      "signature": "<title>",
+      "help": "Search for a metacrtic entry to get its MC rating and info",
+      "brief": null,
+      "hidden": false,
+      "enabled": true,
+      "checks": [],
+      "cooldown": null,
+      "max_concurrency": null,
+      "callback": "modules.media.Media.metacritic"
+    },
+    "mermaid": {
+      "cog": "Chat",
+      "aliases": [],
+      "signature": "<arg>",
+      "help": "Output a merdmaid chart of the given input",
+      "brief": null,
+      "hidden": false,
+      "enabled": true,
+      "checks": [],
+      "cooldown": null,
+      "max_concurrency": null,
+      "callback": "modules.chat.Chat.mermaid"
+    },
+    "metar": {
+      "cog": "Weather",
+      "aliases": [],
+      "signature": "<station>",
+      "help": "Get the Metar aviation weather report for an airport <station>",
+      "brief": null,
+      "hidden": false,
+      "enabled": true,
+      "checks": [],
+      "cooldown": null,
+      "max_concurrency": null,
+      "callback": "modules.weather.Weather.metar"
+    },
+    "mlb": {
+      "cog": "Sports",
+      "aliases": [],
+      "signature": "[date]",
+      "help": "Show today's or [date]s MLB games with score, status",
+      "brief": null,
+      "hidden": false,
+      "enabled": true,
+      "checks": [],
+      "cooldown": null,
+      "max_concurrency": null,
+      "callback": "modules.sports.Sports.mlb"
+    },
+    "mock": {
+      "cog": "Chat",
+      "aliases": [],
+      "signature": "<text>",
+      "help": "Converts text to mOcKiNg CaSe",
+      "brief": null,
+      "hidden": false,
+      "enabled": true,
+      "checks": [],
+      "cooldown": null,
+      "max_concurrency": null,
+      "callback": "modules.chat.Chat.mock"
+    },
+    "mtg": {
+      "cog": "Games",
+      "aliases": [],
+      "signature": "<card>",
+      "help": "Search for and post an MTG <card>",
+      "brief": null,
+      "hidden": false,
+      "enabled": true,
+      "checks": [],
+      "cooldown": null,
+      "max_concurrency": null,
+      "callback": "modules.games.Games.mtg"
+    },
+    "musk": {
+      "cog": "Twitter",
+      "aliases": [],
+      "signature": "",
+      "help": "Show elon's most recent words of wisdom",
+      "brief": null,
+      "hidden": true,
+      "enabled": true,
+      "checks": [],
+      "cooldown": null,
+      "max_concurrency": null,
+      "callback": "modules.twitter.Twitter.musk"
+    },
+    "nba": {
+      "cog": "Sports",
+      "aliases": [
+        "wnba"
+      ],
+      "signature": "[date] [test=False]",
+      "help": "Show today's or [date]s NBA games with score, status",
+      "brief": null,
+      "hidden": false,
+      "enabled": true,
+      "checks": [],
+      "cooldown": null,
+      "max_concurrency": null,
+      "callback": "modules.sports.Sports.nba"
+    },
+    "nba2": {
+      "cog": "Sports",
+      "aliases": [],
+      "signature": "[date]",
+      "help": "Alternate NBA testing",
+      "brief": null,
+      "hidden": false,
+      "enabled": true,
+      "checks": [],
+      "cooldown": null,
+      "max_concurrency": null,
+      "callback": "modules.sports.Sports.nba2"
+    },
+    "nbat": {
+      "cog": "Sports",
+      "aliases": [],
+      "signature": "[date]",
+      "help": "Test command of a self-updating scoreboard",
+      "brief": null,
+      "hidden": true,
+      "enabled": true,
+      "checks": [],
+      "cooldown": null,
+      "max_concurrency": null,
+      "callback": "modules.sports.Sports.nbat"
+    },
+    "ncaa": {
+      "cog": "Sports",
+      "aliases": [
+        "ncaahockey"
+      ],
+      "signature": "[date]",
+      "help": "Show today's or [date]s NCAA games with score, status",
+      "brief": null,
+      "hidden": false,
+      "enabled": true,
+      "checks": [],
+      "cooldown": null,
+      "max_concurrency": null,
+      "callback": "modules.sports.Sports.ncaa"
+    },
+    "newchat": {
+      "cog": "Gemini",
+      "aliases": [],
+      "signature": "[instructions]",
+      "help": "Creates a gemini chat bot instance for a chat thread",
+      "brief": null,
+      "hidden": false,
+      "enabled": true,
+      "checks": [
+        "Gemini.chat_channel"
+      ],
+      "cooldown": null,
+      "max_concurrency": null,
+      "callback": "modules.gemini.Gemini.newchat"
+    },
+    "news": {
+      "cog": "News",
+      "aliases": [],
+      "signature": "[query]",
+      "help": "Search for a story on google news - returns the headline and a link",
+      "brief": null,
+      "hidden": false,
+      "enabled": true,
+      "checks": [],
+      "cooldown": null,
+      "max_concurrency": null,
+      "callback": "modules.news.News.google_news"
+    },
+    "newwotd": {
+      "cog": "Wotd",
+      "aliases": [],
+      "signature": "",
+      "help": "Lets the WOTD owner set a new word",
+      "brief": null,
+      "hidden": true,
+      "enabled": true,
+      "checks": [],
+      "cooldown": null,
+      "max_concurrency": null,
+      "callback": "modules.wotd.Wotd.newwotd"
+    },
+    "nfl": {
+      "cog": "Sports",
+      "aliases": [
+        "cfb",
+        "cfl",
+        "ufl",
+        "xfl"
+      ],
+      "signature": "[date]",
+      "help": "Show today's NFL games with score, status\nWhile a date can be provided the API is weird and only works for the current week?",
+      "brief": null,
+      "hidden": false,
+      "enabled": true,
+      "checks": [],
+      "cooldown": null,
+      "max_concurrency": null,
+      "callback": "modules.sports.Sports.nfl"
+    },
+    "nhl": {
+      "cog": "Sports",
+      "aliases": [],
+      "signature": "[date] [test=False]",
+      "help": "Show today's or [date]s NHL games with score, status",
+      "brief": null,
+      "hidden": false,
+      "enabled": true,
+      "checks": [],
+      "cooldown": null,
+      "max_concurrency": null,
+      "callback": "modules.sports.Sports.nhl"
+    },
+    "nhlt": {
+      "cog": "Sports",
+      "aliases": [],
+      "signature": "[date]",
+      "help": "Test command of a self-updating scoreboard",
+      "brief": null,
+      "hidden": true,
+      "enabled": true,
+      "checks": [],
+      "cooldown": null,
+      "max_concurrency": null,
+      "callback": "modules.sports.Sports.nhlt"
+    },
+    "nick": {
+      "cog": "Owner Commands",
+      "aliases": [],
+      "signature": "<nick>",
+      "help": null,
+      "brief": null,
+      "hidden": true,
+      "enabled": true,
+      "checks": [
+        "is_owner.<locals>.predicate"
+      ],
+      "cooldown": null,
+      "max_concurrency": null,
+      "callback": "modules.owner.OwnerCog.nick"
+    },
+    "np": {
+      "cog": "User",
+      "aliases": [],
+      "signature": "[user]",
+      "help": "Show the users last played song from last.fm",
+      "brief": null,
+      "hidden": false,
+      "enabled": true,
+      "checks": [],
+      "cooldown": null,
+      "max_concurrency": null,
+      "callback": "modules.user.User.lastfm"
+    },
+    "oc": {
+      "cog": "Media",
+      "aliases": [],
+      "signature": "<title>",
+      "help": "OpenCritic game lookup",
+      "brief": null,
+      "hidden": false,
+      "enabled": true,
+      "checks": [],
+      "cooldown": null,
+      "max_concurrency": null,
+      "callback": "modules.media.Media.oc"
+    },
+    "owl": {
+      "cog": "Games",
+      "aliases": [],
+      "signature": "[date]",
+      "help": "Show the live overwatch league matches and scores",
+      "brief": null,
+      "hidden": false,
+      "enabled": true,
+      "checks": [],
+      "cooldown": null,
+      "max_concurrency": null,
+      "callback": "modules.games.Games.owl"
+    },
+    "pdl": {
+      "cog": "Chat",
+      "aliases": [],
+      "signature": "[td]",
+      "help": "Show a random poorlydrawnlines comic. Add 'today' to show the latest.",
+      "brief": null,
+      "hidden": false,
+      "enabled": true,
+      "checks": [],
+      "cooldown": null,
+      "max_concurrency": null,
+      "callback": "modules.chat.Chat.pdl"
+    },
+    "piw": {
+      "cog": "Weather",
+      "aliases": [
+        "ppiw"
+      ],
+      "signature": "[location]",
+      "help": "Show a weather report from forecast.io for <location>\nCan be invoked without location if you have done a `set location`",
+      "brief": null,
+      "hidden": false,
+      "enabled": true,
+      "checks": [],
+      "cooldown": null,
+      "max_concurrency": null,
+      "callback": "modules.weather.Weather.forecast_io"
+    },
+    "playing": {
+      "cog": "Owner Commands",
+      "aliases": [],
+      "signature": "<playing>",
+      "help": null,
+      "brief": null,
+      "hidden": true,
+      "enabled": true,
+      "checks": [
+        "is_owner.<locals>.predicate"
+      ],
+      "cooldown": null,
+      "max_concurrency": null,
+      "callback": "modules.owner.OwnerCog.playing"
+    },
+    "poll": {
+      "cog": "Chat",
+      "aliases": [],
+      "signature": "<msg>",
+      "help": "Create a poll using reactions.\n!poll 1. cats 2. dogs 3. birds\n\n!poll what's for lunch?\n1) pizza\n2) chicken\n3) starvation",
+      "brief": null,
+      "hidden": false,
+      "enabled": true,
+      "checks": [],
+      "cooldown": null,
+      "max_concurrency": null,
+      "callback": "modules.chat.Chat.poll"
+    },
+    "qp": {
+      "cog": "Chat",
+      "aliases": [],
+      "signature": "",
+      "help": "Add a Checkmark and X to your post for a quick yes-no poll",
+      "brief": null,
+      "hidden": false,
+      "enabled": true,
+      "checks": [],
+      "cooldown": null,
+      "max_concurrency": null,
+      "callback": "modules.chat.Chat.quickpoll"
+    },
+    "reload": {
+      "cog": "Owner Commands",
+      "aliases": [],
+      "signature": "<cog>",
+      "help": "Command which Reloads a Module.\nRemember to use dot path. e.g: cogs.owner",
+      "brief": null,
+      "hidden": true,
+      "enabled": true,
+      "checks": [
+        "is_owner.<locals>.predicate"
+      ],
+      "cooldown": null,
+      "max_concurrency": null,
+      "callback": "modules.owner.OwnerCog._reload",
+      "group": {
+        "invoke_without_command": true,
+        "case_insensitive": false
+      }
+    },
+    "reload all": {
+      "cog": "Owner Commands",
+      "aliases": [],
+      "signature": "",
+      "help": "reload all modules in the module folder",
+      "brief": null,
+      "hidden": true,
+      "enabled": true,
+      "checks": [],
+      "cooldown": null,
+      "max_concurrency": null,
+      "callback": "modules.owner.OwnerCog._reload_all"
+    },
+    "reload config": {
+      "cog": "Owner Commands",
+      "aliases": [],
+      "signature": "",
+      "help": "Reload the bot.utils stuff",
+      "brief": null,
+      "hidden": true,
+      "enabled": true,
+      "checks": [],
+      "cooldown": null,
+      "max_concurrency": null,
+      "callback": "modules.owner.OwnerCog._reload_config"
+    },
+    "reload utils": {
+      "cog": "Owner Commands",
+      "aliases": [],
+      "signature": "",
+      "help": "Reload the bot.utils stuff",
+      "brief": null,
+      "hidden": true,
+      "enabled": true,
+      "checks": [],
+      "cooldown": null,
+      "max_concurrency": null,
+      "callback": "modules.owner.OwnerCog._reload_utils"
+    },
+    "remindme": {
+      "cog": "Reminder",
+      "aliases": [
+        "remind"
+      ],
+      "signature": "<message>",
+      "help": null,
+      "brief": null,
+      "hidden": false,
+      "enabled": true,
+      "checks": [
+        "guild_only.<locals>.predicate"
+      ],
+      "cooldown": null,
+      "max_concurrency": null,
+      "callback": "modules.reminder.Reminder.remindme"
+    },
+    "roll": {
+      "cog": "Randomizers",
+      "aliases": [],
+      "signature": "[die=1d6]",
+      "help": "Roll a die such as 1d6",
+      "brief": null,
+      "hidden": false,
+      "enabled": true,
+      "checks": [],
+      "cooldown": null,
+      "max_concurrency": null,
+      "callback": "modules.randomizers.Randomizers.roll"
+    },
+    "rpics": {
+      "cog": "Pics",
+      "aliases": [
+        "birds",
+        "cats",
+        "dogs",
+        "rats",
+        "sloths"
+      ],
+      "signature": "[subreddit]",
+      "help": "Search a subreddit for any image files and return 2 random ones",
+      "brief": null,
+      "hidden": false,
+      "enabled": true,
+      "checks": [],
+      "cooldown": null,
+      "max_concurrency": null,
+      "callback": "modules.picsandvids.Pics.reddit_pics"
+    },
+    "rt": {
+      "cog": "Media",
+      "aliases": [],
+      "signature": "<movie_name>",
+      "help": "Searches Flixster for a movie's Rotten Tomatoes score and critics consensus if available",
+      "brief": null,
+      "hidden": false,
+      "enabled": true,
+      "checks": [],
+      "cooldown": null,
+      "max_concurrency": null,
+      "callback": "modules.media.Media.rt"
+    },
+    "rttv": {
+      "cog": "Media",
+      "aliases": [],
+      "signature": "<title>",
+      "help": "Scrape Rotten Tomatoes for ratings. Less reliable than !rt",
+      "brief": null,
+      "hidden": false,
+      "enabled": true,
+      "checks": [],
+      "cooldown": null,
+      "max_concurrency": null,
+      "callback": "modules.media.Media.rttv"
+    },
+    "sai": {
+      "cog": "Gemini",
+      "aliases": [],
+      "signature": "<ask>",
+      "help": "Ask \"smart\" gemini a question. It uses google and is better for current event questions.",
+      "brief": null,
+      "hidden": false,
+      "enabled": true,
+      "checks": [],
+      "cooldown": null,
+      "max_concurrency": null,
+      "callback": "modules.gemini.Gemini.sai"
+    },
+    "say": {
+      "cog": "Owner Commands",
+      "aliases": [],
+      "signature": "<guild> <message>",
+      "help": null,
+      "brief": null,
+      "hidden": true,
+      "enabled": true,
+      "checks": [
+        "is_owner.<locals>.predicate"
+      ],
+      "cooldown": null,
+      "max_concurrency": null,
+      "callback": "modules.owner.OwnerCog.say"
+    },
+    "sclai": {
+      "cog": "Copilot",
+      "aliases": [],
+      "signature": "<ask>",
+      "help": "Ask Claude Opus 4.5 with web search + compacted channel context for current events",
+      "brief": null,
+      "hidden": false,
+      "enabled": true,
+      "checks": [],
+      "cooldown": null,
+      "max_concurrency": null,
+      "callback": "modules.copilot.Copilot.sclai"
+    },
+    "set": {
+      "cog": "User",
+      "aliases": [],
+      "signature": "",
+      "help": "Use '!help set' for more info. Lets you set user related information for convenience",
+      "brief": null,
+      "hidden": false,
+      "enabled": true,
+      "checks": [],
+      "cooldown": null,
+      "max_concurrency": null,
+      "callback": "modules.user.User._set",
+      "group": {
+        "invoke_without_command": false,
+        "case_insensitive": true
+      }
+    },
+    "set birthday": {
+      "cog": "User",
+      "aliases": [
+        "age"
+      ],
+      "signature": "<bday>",
+      "help": "Set your birthday for things like age",
+      "brief": null,
+      "hidden": false,
+      "enabled": true,
+      "checks": [],
+      "cooldown": null,
+      "max_concurrency": null,
+      "callback": "modules.user.User._set_birthday"
+    },
+    "set last.fm": {
+      "cog": "User",
+      "aliases": [
+        "lastfm",
+        "np"
+      ],
+      "signature": "<user>",
+      "help": "Set your last.fm user name for !np",
+      "brief": null,
+      "hidden": false,
+      "enabled": true,
+      "checks": [],
+      "cooldown": null,
+      "max_concurrency": null,
+      "callback": "modules.user.User._set_lastfm"
+    },
+    "set location": {
+      "cog": "User",
+      "aliases": [],
+      "signature": "<location>",
+      "help": "Set your approximate location for things like weather and localized results. Also sets timezone automatically",
+      "brief": null,
+      "hidden": false,
+      "enabled": true,
+      "checks": [],
+      "cooldown": null,
+      "max_concurrency": null,
+      "callback": "modules.user.User._set_location"
+    },
+    "set strava": {
+      "cog": "User",
+      "aliases": [],
+      "signature": "<user>",
+      "help": "Set your strava athlete ID such as https://www.strava.com/athletes/<######> ",
+      "brief": null,
+      "hidden": false,
+      "enabled": true,
+      "checks": [],
+      "cooldown": null,
+      "max_concurrency": null,
+      "callback": "modules.user.User._set_strava"
+    },
+    "sglm": {
+      "cog": "Copilot",
+      "aliases": [],
+      "signature": "<ask>",
+      "help": "Ask GLM with web search + channel context",
+      "brief": null,
+      "hidden": false,
+      "enabled": true,
+      "checks": [],
+      "cooldown": null,
+      "max_concurrency": null,
+      "callback": "modules.copilot.Copilot.sglm"
+    },
+    "spirits": {
+      "cog": "Food",
+      "aliases": [
+        "booze",
+        "liquor",
+        "spirit"
+      ],
+      "signature": "<spirit>",
+      "help": "Search Distiller.com for a <spirit> and return some information about it",
+      "brief": null,
+      "hidden": false,
+      "enabled": true,
+      "checks": [],
+      "cooldown": null,
+      "max_concurrency": null,
+      "callback": "modules.food.Food.spirits"
+    },
+    "starboard": {
+      "cog": "Stars",
+      "aliases": [],
+      "signature": "",
+      "help": null,
+      "brief": null,
+      "hidden": false,
+      "enabled": true,
+      "checks": [
+        "has_any_role.<locals>.predicate"
+      ],
+      "cooldown": null,
+      "max_concurrency": null,
+      "callback": "modules.stars.Stars.starboard"
+    },
+    "starlimit": {
+      "cog": "Stars",
+      "aliases": [],
+      "signature": "<limit>",
+      "help": null,
+      "brief": null,
+      "hidden": false,
+      "enabled": true,
+      "checks": [
+        "has_any_role.<locals>.predicate"
+      ],
+      "cooldown": null,
+      "max_concurrency": null,
+      "callback": "modules.stars.Stars.starlimit"
+    },
+    "stock": {
+      "cog": "Finance",
+      "aliases": [
+        "stocks",
+        "stonks"
+      ],
+      "signature": "<name>",
+      "help": "Look up a stock and show its current price, change, etc",
+      "brief": null,
+      "hidden": false,
+      "enabled": true,
+      "checks": [],
+      "cooldown": null,
+      "max_concurrency": null,
+      "callback": "modules.finance.Finance.stock"
+    },
+    "strava": {
+      "cog": "Strava",
+      "aliases": [],
+      "signature": "[user=0]",
+      "help": "Show your most recent ride from strava.com\nOptionally provide a [user] ID to show the most recent ride of\nuse `set strava <id>` to set your strava ID",
+      "brief": null,
+      "hidden": false,
+      "enabled": true,
+      "checks": [],
+      "cooldown": null,
+      "max_concurrency": null,
+      "callback": "modules.strava.Strava._strava",
+      "group": {
+        "invoke_without_command": true,
+        "case_insensitive": true
+      }
+    },
+    "strava activity": {
+      "cog": "Strava",
+      "aliases": [],
+      "signature": "<activity>",
+      "help": null,
+      "brief": null,
+      "hidden": false,
+      "enabled": true,
+      "checks": [],
+      "cooldown": null,
+      "max_concurrency": null,
+      "callback": "modules.strava.Strava.check_activity"
+    },
+    "strava set": {
+      "cog": "Strava",
+      "aliases": [],
+      "signature": "<user>",
+      "help": null,
+      "brief": null,
+      "hidden": false,
+      "enabled": true,
+      "checks": [],
+      "cooldown": null,
+      "max_concurrency": null,
+      "callback": "modules.strava.Strava._strava_set"
+    },
+    "sun": {
+      "cog": "Weather",
+      "aliases": [
+        "moon",
+        "sunrise",
+        "sunset"
+      ],
+      "signature": "[location]",
+      "help": "Show sunrise/sunset for a <location>\nCan be invoked without location if you have done a `set location`",
+      "brief": null,
+      "hidden": false,
+      "enabled": true,
+      "checks": [],
+      "cooldown": null,
+      "max_concurrency": null,
+      "callback": "modules.weather.Weather.sun"
+    },
+    "synctree": {
+      "cog": "Owner Commands",
+      "aliases": [],
+      "signature": "",
+      "help": null,
+      "brief": null,
+      "hidden": false,
+      "enabled": true,
+      "checks": [
+        "guild_only.<locals>.predicate",
+        "is_owner.<locals>.predicate"
+      ],
+      "cooldown": null,
+      "max_concurrency": null,
+      "callback": "modules.owner.OwnerCog.synctree"
+    },
+    "tag": {
+      "cog": "Chat",
+      "aliases": [],
+      "signature": "<user> <tag>",
+      "help": "Tag a user",
+      "brief": null,
+      "hidden": false,
+      "enabled": true,
+      "checks": [
+        "has_any_role.<locals>.predicate"
+      ],
+      "cooldown": null,
+      "max_concurrency": null,
+      "callback": "modules.chat.Chat.tag"
+    },
+    "testbutton": {
+      "cog": "Chat",
+      "aliases": [],
+      "signature": "",
+      "help": null,
+      "brief": null,
+      "hidden": true,
+      "enabled": true,
+      "checks": [],
+      "cooldown": null,
+      "max_concurrency": null,
+      "callback": "modules.chat.Chat.testbutton"
+    },
+    "tictactoe": {
+      "cog": "InfiniteTicTacToe",
+      "aliases": [
+        "ttt"
+      ],
+      "signature": "",
+      "help": "Starts a game of Infinite Tic-Tac-Toe.",
+      "brief": null,
+      "hidden": false,
+      "enabled": true,
+      "checks": [],
+      "cooldown": null,
+      "max_concurrency": null,
+      "callback": "modules.tictactoe.InfiniteTicTacToe.tictactoe"
+    },
+    "time": {
+      "cog": "User",
+      "aliases": [],
+      "signature": "",
+      "help": "What time is it? Game time.",
+      "brief": null,
+      "hidden": false,
+      "enabled": true,
+      "checks": [],
+      "cooldown": null,
+      "max_concurrency": null,
+      "callback": "modules.user.User.time"
+    },
+    "timetest": {
+      "cog": "Reminder",
+      "aliases": [],
+      "signature": "<time>",
+      "help": "Test the input for the time formatter",
+      "brief": null,
+      "hidden": true,
+      "enabled": true,
+      "checks": [],
+      "cooldown": null,
+      "max_concurrency": null,
+      "callback": "modules.reminder.Reminder.timetest"
+    },
+    "translate": {
+      "cog": "Chat",
+      "aliases": [
+        "tr"
+      ],
+      "signature": "<phrase>",
+      "help": "Translate short phrases using google translate\nOptionally specify language code such as `!translate en-es cat`",
+      "brief": null,
+      "hidden": false,
+      "enabled": true,
+      "checks": [],
+      "cooldown": null,
+      "max_concurrency": null,
+      "callback": "modules.chat.Chat.translate"
+    },
+    "trivia": {
+      "cog": "Trivia",
+      "aliases": [],
+      "signature": "[num_questions=1]",
+      "help": "Ask trivia questions from Jeopardy\noptionally provide [num_questions] for number of questions to ask (defaults to 1)",
+      "brief": null,
+      "hidden": false,
+      "enabled": true,
+      "checks": [],
+      "cooldown": null,
+      "max_concurrency": null,
+      "callback": "modules.trivia.Trivia.trivia",
+      "group": {
+        "invoke_without_command": true,
+        "case_insensitive": false
+      }
+    },
+    "trivia autohint": {
+      "cog": "Trivia",
+      "aliases": [],
+      "signature": "",
+      "help": "Set hard mode (no hints)",
+      "brief": null,
+      "hidden": false,
+      "enabled": true,
+      "checks": [],
+      "cooldown": null,
+      "max_concurrency": null,
+      "callback": "modules.trivia.Trivia.auto_hint"
+    },
+    "trivia delay": {
+      "cog": "Trivia",
+      "aliases": [],
+      "signature": "<time>",
+      "help": "Set the time delay in seconds between multiple questions",
+      "brief": null,
+      "hidden": false,
+      "enabled": true,
+      "checks": [],
+      "cooldown": null,
+      "max_concurrency": null,
+      "callback": "modules.trivia.Trivia.question_delay"
+    },
+    "trivia hard": {
+      "cog": "Trivia",
+      "aliases": [],
+      "signature": "",
+      "help": "Set hard mode (no hints)",
+      "brief": null,
+      "hidden": false,
+      "enabled": true,
+      "checks": [],
+      "cooldown": null,
+      "max_concurrency": null,
+      "callback": "modules.trivia.Trivia.hard_mode"
+    },
+    "trivia help": {
+      "cog": "Trivia",
+      "aliases": [],
+      "signature": "",
+      "help": "Show trivia help",
+      "brief": null,
+      "hidden": true,
+      "enabled": true,
+      "checks": [],
+      "cooldown": null,
+      "max_concurrency": null,
+      "callback": "modules.trivia.Trivia.trivia_help"
+    },
+    "trivia round": {
+      "cog": "Trivia",
+      "aliases": [],
+      "signature": "[num_questions=10]",
+      "help": "Start a round of trivia with a separate score from today's scores",
+      "brief": null,
+      "hidden": false,
+      "enabled": true,
+      "checks": [],
+      "cooldown": null,
+      "max_concurrency": null,
+      "callback": "modules.trivia.Trivia.trivia_round"
+    },
+    "trivia score": {
+      "cog": "Trivia",
+      "aliases": [],
+      "signature": "",
+      "help": "Show the current score / round score if currently playing a round",
+      "brief": null,
+      "hidden": false,
+      "enabled": true,
+      "checks": [],
+      "cooldown": null,
+      "max_concurrency": null,
+      "callback": "modules.trivia.Trivia.trivia_score"
+    },
+    "trivia stop": {
+      "cog": "Trivia",
+      "aliases": [],
+      "signature": "",
+      "help": "Stop trivia after the next question/immediately if between questions",
+      "brief": null,
+      "hidden": false,
+      "enabled": true,
+      "checks": [],
+      "cooldown": null,
+      "max_concurrency": null,
+      "callback": "modules.trivia.Trivia.stop_trivia"
+    },
+    "trivia time": {
+      "cog": "Trivia",
+      "aliases": [],
+      "signature": "<time>",
+      "help": "Set the time in seconds you get to answer the question",
+      "brief": null,
+      "hidden": false,
+      "enabled": true,
+      "checks": [],
+      "cooldown": null,
+      "max_concurrency": null,
+      "callback": "modules.trivia.Trivia.question_time"
+    },
+    "trump": {
+      "cog": "Twitter",
+      "aliases": [],
+      "signature": "",
+      "help": "Show trump's most recent words of wisdom",
+      "brief": null,
+      "hidden": true,
+      "enabled": true,
+      "checks": [],
+      "cooldown": null,
+      "max_concurrency": null,
+      "callback": "modules.twitter.Twitter.trump"
+    },
+    "tts": {
+      "cog": "VoiceTTS",
+      "aliases": [],
+      "signature": "",
+      "help": "Voice TTS commands. Use !tts join to start.",
+      "brief": null,
+      "hidden": false,
+      "enabled": true,
+      "checks": [],
+      "cooldown": null,
+      "max_concurrency": null,
+      "callback": "modules.voice_tts.VoiceTTS.tts_group",
+      "group": {
+        "invoke_without_command": true,
+        "case_insensitive": false
+      }
+    },
+    "tts join": {
+      "cog": "VoiceTTS",
+      "aliases": [],
+      "signature": "[text_channel] [voice_channel_name]",
+      "help": "Join a voice channel and monitor a text channel for TTS.\n\nUsage:\n    !tts join                          \u2014 Monitor current channel, join your VC\n    !tts join #palship                 \u2014 Monitor #palship, join your VC\n    !tts join #palship General Voice   \u2014 Monitor #palship, join \"General Voice\"",
+      "brief": null,
+      "hidden": false,
+      "enabled": true,
+      "checks": [],
+      "cooldown": null,
+      "max_concurrency": null,
+      "callback": "modules.voice_tts.VoiceTTS.tts_join"
+    },
+    "tts leave": {
+      "cog": "VoiceTTS",
+      "aliases": [],
+      "signature": "",
+      "help": "Disconnect from voice and stop TTS.",
+      "brief": null,
+      "hidden": false,
+      "enabled": true,
+      "checks": [],
+      "cooldown": null,
+      "max_concurrency": null,
+      "callback": "modules.voice_tts.VoiceTTS.tts_leave"
+    },
+    "tts set": {
+      "cog": "VoiceTTS",
+      "aliases": [],
+      "signature": "[key] [value]",
+      "help": "Adjust TTS settings.\n\nUsage:\n    !tts set                    \u2014 Show current settings\n    !tts set queue_size 10      \u2014 Max queued messages (1-50)\n    !tts set max_length 2000    \u2014 Max message length in chars (100-4000)",
+      "brief": null,
+      "hidden": false,
+      "enabled": true,
+      "checks": [],
+      "cooldown": null,
+      "max_concurrency": null,
+      "callback": "modules.voice_tts.VoiceTTS.tts_set"
+    },
+    "tts skip": {
+      "cog": "VoiceTTS",
+      "aliases": [],
+      "signature": "",
+      "help": "Skip the currently playing TTS message.",
+      "brief": null,
+      "hidden": false,
+      "enabled": true,
+      "checks": [],
+      "cooldown": null,
+      "max_concurrency": null,
+      "callback": "modules.voice_tts.VoiceTTS.tts_skip"
+    },
+    "tts status": {
+      "cog": "VoiceTTS",
+      "aliases": [],
+      "signature": "",
+      "help": "Show current TTS status.",
+      "brief": null,
+      "hidden": false,
+      "enabled": true,
+      "checks": [],
+      "cooldown": null,
+      "max_concurrency": null,
+      "callback": "modules.voice_tts.VoiceTTS.tts_status"
+    },
+    "tts voice": {
+      "cog": "VoiceTTS",
+      "aliases": [],
+      "signature": "<voice_name>",
+      "help": "Set a global voice override (all users same voice), or 'auto' for per-user voices.",
+      "brief": null,
+      "hidden": false,
+      "enabled": true,
+      "checks": [],
+      "cooldown": null,
+      "max_concurrency": null,
+      "callback": "modules.voice_tts.VoiceTTS.tts_voice"
+    },
+    "tts voices": {
+      "cog": "VoiceTTS",
+      "aliases": [],
+      "signature": "[locale=en]",
+      "help": "List available TTS voices. Optionally filter by locale (default: en).",
+      "brief": null,
+      "hidden": false,
+      "enabled": true,
+      "checks": [],
+      "cooldown": null,
+      "max_concurrency": null,
+      "callback": "modules.voice_tts.VoiceTTS.tts_voices"
+    },
+    "twitter_token": {
+      "cog": "Twitter",
+      "aliases": [],
+      "signature": "",
+      "help": null,
+      "brief": null,
+      "hidden": true,
+      "enabled": true,
+      "checks": [
+        "is_owner.<locals>.predicate"
+      ],
+      "cooldown": null,
+      "max_concurrency": null,
+      "callback": "modules.twitter.Twitter.twitter_token"
+    },
+    "ud": {
+      "cog": "Internets",
+      "aliases": [],
+      "signature": "[term]",
+      "help": "Searches for a term on urbandictionary.com",
+      "brief": null,
+      "hidden": false,
+      "enabled": true,
+      "checks": [],
+      "cooldown": null,
+      "max_concurrency": null,
+      "callback": "modules.internets.Internets.urban_dictionary"
+    },
+    "unload": {
+      "cog": "Owner Commands",
+      "aliases": [],
+      "signature": "<cog>",
+      "help": "Command which Unloads a Module.\nRemember to use dot path. e.g: cogs.owner",
+      "brief": null,
+      "hidden": true,
+      "enabled": true,
+      "checks": [
+        "is_owner.<locals>.predicate"
+      ],
+      "cooldown": null,
+      "max_concurrency": null,
+      "callback": "modules.owner.OwnerCog._unload"
+    },
+    "uptime": {
+      "cog": "Owner Commands",
+      "aliases": [],
+      "signature": "",
+      "help": null,
+      "brief": null,
+      "hidden": true,
+      "enabled": true,
+      "checks": [
+        "is_owner.<locals>.predicate"
+      ],
+      "cooldown": null,
+      "max_concurrency": null,
+      "callback": "modules.owner.OwnerCog.uptime"
+    },
+    "vc": {
+      "cog": "Weather",
+      "aliases": [
+        "pvc"
+      ],
+      "signature": "[location]",
+      "help": "Show a weather report from Visual Crossing for <location>\nCan be invoked without location if you have done a `set location`",
+      "brief": null,
+      "hidden": false,
+      "enabled": true,
+      "checks": [],
+      "cooldown": null,
+      "max_concurrency": null,
+      "callback": "modules.weather.Weather.visual_crossing"
+    },
+    "w": {
+      "cog": "Weather",
+      "aliases": [
+        "forecast",
+        "pw"
+      ],
+      "signature": "[location]",
+      "help": "Show a weather report from accuweather for <location>\nCan be invoked without location if you have done a `set location`",
+      "brief": null,
+      "hidden": false,
+      "enabled": true,
+      "checks": [],
+      "cooldown": null,
+      "max_concurrency": null,
+      "callback": "modules.weather.Weather.accuweather"
+    },
+    "watching": {
+      "cog": "Owner Commands",
+      "aliases": [],
+      "signature": "<watching>",
+      "help": null,
+      "brief": null,
+      "hidden": true,
+      "enabled": true,
+      "checks": [
+        "is_owner.<locals>.predicate"
+      ],
+      "cooldown": null,
+      "max_concurrency": null,
+      "callback": "modules.owner.OwnerCog.watching"
+    },
+    "wc": {
+      "cog": "Weather",
+      "aliases": [
+        "pwc"
+      ],
+      "signature": "[location]",
+      "help": "Show a weather report from weather.com for <location>\nCan be invoked without location if you have done a `set location`",
+      "brief": null,
+      "hidden": false,
+      "enabled": true,
+      "checks": [],
+      "cooldown": null,
+      "max_concurrency": null,
+      "callback": "modules.weather.Weather.weathercom"
+    },
+    "wemojitest": {
+      "cog": "Weather",
+      "aliases": [],
+      "signature": "<emoji>",
+      "help": null,
+      "brief": null,
+      "hidden": true,
+      "enabled": true,
+      "checks": [
+        "is_owner.<locals>.predicate"
+      ],
+      "cooldown": null,
+      "max_concurrency": null,
+      "callback": "modules.weather.Weather.wemojitest"
+    },
+    "wfd": {
+      "cog": "Food",
+      "aliases": [],
+      "signature": "[inpt]",
+      "help": "Get a random recipe from spoontacular",
+      "brief": null,
+      "hidden": false,
+      "enabled": true,
+      "checks": [],
+      "cooldown": null,
+      "max_concurrency": null,
+      "callback": "modules.food.Food.get_recipe"
+    },
+    "wfl": {
+      "cog": "Randomizers",
+      "aliases": [],
+      "signature": "",
+      "help": "What's for lunch? You probably don't want it",
+      "brief": null,
+      "hidden": false,
+      "enabled": true,
+      "checks": [],
+      "cooldown": null,
+      "max_concurrency": null,
+      "callback": "modules.randomizers.Randomizers.wfl"
+    },
+    "whopper": {
+      "cog": "User",
+      "aliases": [],
+      "signature": "",
+      "help": "Burger",
+      "brief": null,
+      "hidden": false,
+      "enabled": true,
+      "checks": [],
+      "cooldown": null,
+      "max_concurrency": null,
+      "callback": "modules.user.User.whopper"
+    },
+    "wiki": {
+      "cog": "Internets",
+      "aliases": [],
+      "signature": "[term]",
+      "help": "Search for a term on wikipedia and return a snippet",
+      "brief": null,
+      "hidden": false,
+      "enabled": true,
+      "checks": [],
+      "cooldown": null,
+      "max_concurrency": null,
+      "callback": "modules.internets.Internets.wikipedia"
+    },
+    "wine": {
+      "cog": "Food",
+      "aliases": [],
+      "signature": "<wine>",
+      "help": "Search vivino.com for a <wine> and return some information about it",
+      "brief": null,
+      "hidden": false,
+      "enabled": true,
+      "checks": [],
+      "cooldown": null,
+      "max_concurrency": null,
+      "callback": "modules.food.Food.wine"
+    },
+    "wolfram": {
+      "cog": "Internets",
+      "aliases": [
+        "c"
+      ],
+      "signature": "<query>",
+      "help": "Query wolfram alpha and return the output",
+      "brief": null,
+      "hidden": false,
+      "enabled": true,
+      "checks": [],
+      "cooldown": null,
+      "max_concurrency": null,
+      "callback": "modules.internets.Internets.wolfram"
+    },
+    "wordcount": {
+      "cog": "Wotd",
+      "aliases": [
+        "fullwordcount"
+      ],
+      "signature": "<word>",
+      "help": null,
+      "brief": null,
+      "hidden": true,
+      "enabled": true,
+      "checks": [],
+      "cooldown": null,
+      "max_concurrency": null,
+      "callback": "modules.wotd.Wotd.wordcount"
+    },
+    "worldcup": {
+      "cog": "WorldCup",
+      "aliases": [
+        "wc2026"
+      ],
+      "signature": "[date]",
+      "help": "Show World Cup 2026 matches for today (or a given date).",
+      "brief": null,
+      "hidden": false,
+      "enabled": true,
+      "checks": [],
+      "cooldown": {
+        "rate": 3,
+        "per": 60.0,
+        "type": "BucketType.user"
+      },
+      "max_concurrency": null,
+      "callback": "modules.worldcup.WorldCup.worldcup"
+    },
+    "worldcupgroup": {
+      "cog": "WorldCup",
+      "aliases": [
+        "wcgroup"
+      ],
+      "signature": "[group]",
+      "help": "Show one World Cup group's standings (A\u2013L).",
+      "brief": null,
+      "hidden": false,
+      "enabled": true,
+      "checks": [],
+      "cooldown": {
+        "rate": 3,
+        "per": 60.0,
+        "type": "BucketType.user"
+      },
+      "max_concurrency": null,
+      "callback": "modules.worldcup.WorldCup.worldcupgroup"
+    },
+    "worldcupschedule": {
+      "cog": "WorldCup",
+      "aliases": [
+        "wcfixtures",
+        "wcschedule"
+      ],
+      "signature": "[days=7]",
+      "help": "Show upcoming World Cup matches for the next N days (1\u201330).",
+      "brief": null,
+      "hidden": false,
+      "enabled": true,
+      "checks": [],
+      "cooldown": {
+        "rate": 3,
+        "per": 60.0,
+        "type": "BucketType.user"
+      },
+      "max_concurrency": null,
+      "callback": "modules.worldcup.WorldCup.worldcupschedule"
+    },
+    "worldcupstandings": {
+      "cog": "WorldCup",
+      "aliases": [
+        "wcstandings",
+        "wctable"
+      ],
+      "signature": "",
+      "help": "Show World Cup group standings \u2014 one embed per group.",
+      "brief": null,
+      "hidden": false,
+      "enabled": true,
+      "checks": [],
+      "cooldown": {
+        "rate": 3,
+        "per": 60.0,
+        "type": "BucketType.user"
+      },
+      "max_concurrency": null,
+      "callback": "modules.worldcup.WorldCup.worldcupstandings"
+    },
+    "wotd": {
+      "cog": "Wotd",
+      "aliases": [
+        "gotd"
+      ],
+      "signature": "",
+      "help": "Shows some stats about the current wotd",
+      "brief": null,
+      "hidden": false,
+      "enabled": true,
+      "checks": [],
+      "cooldown": null,
+      "max_concurrency": null,
+      "callback": "modules.wotd.Wotd._wotd"
+    },
+    "wotdhint": {
+      "cog": "Wotd",
+      "aliases": [],
+      "signature": "",
+      "help": "Send a WOTD hint either by the word owner or the bot owner",
+      "brief": null,
+      "hidden": true,
+      "enabled": true,
+      "checks": [],
+      "cooldown": null,
+      "max_concurrency": null,
+      "callback": "modules.wotd.Wotd.wotdhint"
+    },
+    "wotdstats": {
+      "cog": "Wotd",
+      "aliases": [],
+      "signature": "<query>",
+      "help": null,
+      "brief": null,
+      "hidden": true,
+      "enabled": true,
+      "checks": [
+        "is_owner.<locals>.predicate"
+      ],
+      "cooldown": null,
+      "max_concurrency": null,
+      "callback": "modules.wotd.Wotd.wotdstats"
+    },
+    "wotdtest": {
+      "cog": "Wotd",
+      "aliases": [],
+      "signature": "",
+      "help": "Lets you set a new WOTD for testing.\nSets WOTD author to the bot so that you can test trigger it",
+      "brief": null,
+      "hidden": true,
+      "enabled": true,
+      "checks": [
+        "is_owner.<locals>.predicate"
+      ],
+      "cooldown": null,
+      "max_concurrency": null,
+      "callback": "modules.wotd.Wotd.wotdtest"
+    },
+    "wq": {
+      "cog": "Weather",
+      "aliases": [],
+      "signature": "[location]",
+      "help": null,
+      "brief": null,
+      "hidden": false,
+      "enabled": true,
+      "checks": [],
+      "cooldown": null,
+      "max_concurrency": null,
+      "callback": "modules.weather.Weather.wq"
+    },
+    "xkcd": {
+      "cog": "Chat",
+      "aliases": [],
+      "signature": "[td]",
+      "help": "Show a random XKCD. Add 'today' to show the latest.",
+      "brief": null,
+      "hidden": false,
+      "enabled": true,
+      "checks": [],
+      "cooldown": null,
+      "max_concurrency": null,
+      "callback": "modules.chat.Chat.xkcd"
+    },
+    "yr": {
+      "cog": "Weather",
+      "aliases": [
+        "pyr"
+      ],
+      "signature": "[location]",
+      "help": "Show a weather report from yr.no for <location>\nCan be invoked without location if you have done a `set location`",
+      "brief": null,
+      "hidden": false,
+      "enabled": true,
+      "checks": [],
+      "cooldown": null,
+      "max_concurrency": null,
+      "callback": "modules.weather.Weather.yr"
+    },
+    "yt": {
+      "cog": "Vids",
+      "aliases": [],
+      "signature": "<search>",
+      "help": "Search for a youtube video and return some info along with an embedded link",
+      "brief": null,
+      "hidden": false,
+      "enabled": true,
+      "checks": [],
+      "cooldown": null,
+      "max_concurrency": null,
+      "callback": "modules.picsandvids.Vids.youtube"
+    },
+    "ziti": {
+      "cog": "Randomizers",
+      "aliases": [],
+      "signature": "",
+      "help": "skrrt",
+      "brief": null,
+      "hidden": false,
+      "enabled": true,
+      "checks": [],
+      "cooldown": null,
+      "max_concurrency": null,
+      "callback": "modules.randomizers.Randomizers.ziti"
+    }
+  },
+  "app_commands": {
+    "Age": {
+      "kind": "ContextMenu",
+      "description": null,
+      "menu_type": "AppCommandType.user"
+    },
+    "React Command": {
+      "kind": "ContextMenu",
+      "description": null,
+      "menu_type": "AppCommandType.message"
+    },
+    "Strava": {
+      "kind": "ContextMenu",
+      "description": null,
+      "menu_type": "AppCommandType.user"
+    },
+    "command": {
+      "kind": "Command",
+      "description": "Do a custom command",
+      "parameters": [
+        {
+          "name": "command",
+          "type": "AppCommandOptionType.string",
+          "required": true,
+          "description": "\u2026"
+        }
+      ]
+    },
+    "remind": {
+      "kind": "Command",
+      "description": "Set a reminder to yourself",
+      "parameters": [
+        {
+          "name": "when",
+          "type": "AppCommandOptionType.string",
+          "required": true,
+          "description": "When to remind you"
+        },
+        {
+          "name": "what",
+          "type": "AppCommandOptionType.string",
+          "required": true,
+          "description": "What to remind you of"
+        }
+      ]
+    }
+  },
+  "sqlite_schemas": {
+    "data/customcommands.sqlite": [
+      {
+        "type": "table",
+        "name": "cfind",
+        "sql": "CREATE VIRTUAL TABLE cfind USING FTS5(cmd, description)"
+      },
+      {
+        "type": "table",
+        "name": "cfind_config",
+        "sql": "CREATE TABLE 'cfind_config'(k PRIMARY KEY, v) WITHOUT ROWID"
+      },
+      {
+        "type": "table",
+        "name": "cfind_content",
+        "sql": "CREATE TABLE 'cfind_content'(id INTEGER PRIMARY KEY, c0, c1)"
+      },
+      {
+        "type": "table",
+        "name": "cfind_data",
+        "sql": "CREATE TABLE 'cfind_data'(id INTEGER PRIMARY KEY, block BLOB)"
+      },
+      {
+        "type": "table",
+        "name": "cfind_docsize",
+        "sql": "CREATE TABLE 'cfind_docsize'(id INTEGER PRIMARY KEY, sz BLOB)"
+      },
+      {
+        "type": "table",
+        "name": "cfind_idx",
+        "sql": "CREATE TABLE 'cfind_idx'(segid, term, pgno, PRIMARY KEY(segid, term)) WITHOUT ROWID"
+      },
+      {
+        "type": "table",
+        "name": "commands",
+        "sql": "CREATE TABLE 'commands' ('cmd' TEXT UNIQUE ON CONFLICT REPLACE, 'output' TEXT, 'owner' TEXT, 'description' TEXT)"
+      },
+      {
+        "type": "trigger",
+        "name": "cfindd",
+        "sql": "CREATE TRIGGER cfindd AFTER DELETE ON commands BEGIN DELETE FROM cfind WHERE cmd = old.cmd; END"
+      },
+      {
+        "type": "trigger",
+        "name": "cfindi",
+        "sql": "CREATE TRIGGER cfindi AFTER INSERT ON commands BEGIN INSERT INTO cfind(cmd, description) VALUES (new.cmd, new.description); END"
+      },
+      {
+        "type": "trigger",
+        "name": "cfindu",
+        "sql": "CREATE TRIGGER cfindu AFTER UPDATE ON commands BEGIN DELETE FROM cfind WHERE cmd = old.cmd; INSERT INTO cfind(cmd, description) VALUES (new.cmd, new.description); END"
+      }
+    ],
+    "data/reminders.sqlite": [
+      {
+        "type": "table",
+        "name": "reminders",
+        "sql": "CREATE TABLE 'reminders' ( \"timestamp\" integer, \"channel\" integer, \"user\" integer, \"when\" text, \"reminder\" text )"
+      }
+    ],
+    "data/stars.sqlite3": [
+      {
+        "type": "table",
+        "name": "posts",
+        "sql": "CREATE TABLE 'posts' ( 'original' INTEGER UNIQUE ON CONFLICT REPLACE, 'starpost' INTEGER )"
+      },
+      {
+        "type": "table",
+        "name": "settings",
+        "sql": "CREATE TABLE 'settings' ( 'guild' INTEGER, 'setting' TEXT, 'value' TEXT, PRIMARY KEY (guild, setting) )"
+      }
+    ],
+    "data/tags.sqlite": [
+      {
+        "type": "table",
+        "name": "tags",
+        "sql": "CREATE TABLE 'tags' ( \"untag_timestamp\" integer, \"guild\" integer, \"user\" integer, \"tag\" integer, \"plaintext\" text)"
+      }
+    ],
+    "data/triviascores.sqlite": [
+      {
+        "type": "table",
+        "name": "scores",
+        "sql": "CREATE TABLE 'scores' ( \"dateid\" date NOT NULL UNIQUE, numqs integer, \"scores\" text )"
+      }
+    ],
+    "data/wotd.sqlite": [
+      {
+        "type": "table",
+        "name": "hitlog",
+        "sql": "CREATE TABLE 'hitlog' ( \"channel\" integer, \"timestamp\" text, \"finder\" integer, \"word\" text, \"wordcount\" integer, \"setter\" integer, \"wordage\" integer, \"fullword\" boolean )"
+      },
+      {
+        "type": "table",
+        "name": "settings",
+        "sql": "CREATE TABLE 'settings' ( \"channel\" integer, \"setting\" text, \"value\" text, PRIMARY KEY (channel, setting) )"
+      }
+    ],
+    "logfiles/ai_cache.db": [
+      {
+        "type": "table",
+        "name": "ai_acl",
+        "sql": "CREATE TABLE ai_acl ( guild_id INTEGER NOT NULL, user_id INTEGER NOT NULL, allowed INTEGER NOT NULL DEFAULT 1, added_by INTEGER, added_at REAL NOT NULL, PRIMARY KEY (guild_id, user_id) )"
+      },
+      {
+        "type": "table",
+        "name": "ai_acl_config",
+        "sql": "CREATE TABLE ai_acl_config ( guild_id INTEGER PRIMARY KEY, enforced INTEGER NOT NULL DEFAULT 0 )"
+      },
+      {
+        "type": "table",
+        "name": "compaction_cache",
+        "sql": "CREATE TABLE compaction_cache ( channel_id INTEGER PRIMARY KEY, guild_id INTEGER NOT NULL, oldest_snowflake INTEGER NOT NULL, newest_snowflake INTEGER NOT NULL, summary_text TEXT NOT NULL, model_used TEXT NOT NULL, token_count INTEGER, created_at REAL NOT NULL, updated_at REAL NOT NULL )"
+      },
+      {
+        "type": "table",
+        "name": "migrations",
+        "sql": "CREATE TABLE migrations (name TEXT PRIMARY KEY)"
+      },
+      {
+        "type": "table",
+        "name": "personas",
+        "sql": "CREATE TABLE personas ( guild_id INTEGER NOT NULL, persona_name TEXT NOT NULL, user_id INTEGER NOT NULL, sample_tokens INTEGER DEFAULT 50000, provider TEXT DEFAULT 'copilot', created_by INTEGER NOT NULL, created_at REAL NOT NULL, PRIMARY KEY (guild_id, persona_name) )"
+      },
+      {
+        "type": "table",
+        "name": "settings",
+        "sql": "CREATE TABLE settings ( guild_id INTEGER, channel_id INTEGER, key TEXT NOT NULL, value TEXT NOT NULL, updated_at REAL NOT NULL, PRIMARY KEY (guild_id, channel_id, key) )"
+      },
+      {
+        "type": "table",
+        "name": "usage_log",
+        "sql": "CREATE TABLE usage_log ( id INTEGER PRIMARY KEY AUTOINCREMENT, channel_id INTEGER NOT NULL, guild_id INTEGER NOT NULL, command TEXT NOT NULL, input_tokens INTEGER NOT NULL, output_tokens INTEGER NOT NULL, cost_usd REAL, model TEXT NOT NULL, timestamp REAL NOT NULL )"
+      },
+      {
+        "type": "table",
+        "name": "user_prompts",
+        "sql": "CREATE TABLE user_prompts ( guild_id INTEGER NOT NULL, channel_id INTEGER, user_id INTEGER NOT NULL, prompt TEXT NOT NULL, updated_at REAL NOT NULL, PRIMARY KEY (guild_id, channel_id, user_id) )"
+      }
+    ]
+  }
+}

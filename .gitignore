@@ -61,3 +61,7 @@ config/
 !config.py.example
 data/
 modules/disabled
+
+# local dev
+.venv/
+.pytest_cache/
