@@ -168,7 +168,7 @@ class Games(commands.Cog):
                 await ctx.send(f"Doesn't appear to be any games on {now.date()}")
             else:
                 await ctx.send("```{}```".format("\n".join(out)))
-        except:
+        except Exception:
             await ctx.send(f"Either there's no games on {now.date()} or the OWL site broke this")
 
 

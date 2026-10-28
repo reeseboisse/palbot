@@ -262,7 +262,7 @@ class Weather(commands.Cog):
 
         try:
             outlook_imp = f"{data['minutely']['summary']}. Day: {data['daily']['summary']}"
-        except:
+        except Exception:
             outlook_imp = f"{data['hourly'].get('summary', '')}. Day: {data['daily'].get('summary', '')}"
         outlook_metric = units.imperial_string_to_metric(outlook_imp)
 
@@ -751,7 +751,7 @@ class Weather(commands.Cog):
         
         try:
             pm25 = data['iaqi']['pm25']['v']
-        except:
+        except Exception:
             pm25 = data['aqi']
 
         conditions = {
@@ -774,7 +774,7 @@ class Weather(commands.Cog):
         try:
             o3 = pm25 = data['iaqi']['o3']['v']
             out += " - Ozone: {}".format(o3)
-        except:
+        except Exception:
             pass
         
         await ctx.send(out)
@@ -815,7 +815,7 @@ class Weather(commands.Cog):
 
         try:
             tmz = pytz.timezone(data['timezone'])
-        except:
+        except Exception:
             tmz = pytz.timezone("UTC")
         now = datetime.fromtimestamp(int(data['currently']['time']), tz=tmz)
         data = data['daily']['data'][0]
@@ -867,7 +867,7 @@ class Weather(commands.Cog):
     async def wemojitest(self, ctx, *, emoji):
         try:
             emoji = int(emoji)
-        except:
+        except Exception:
             pass
         msg = WEMOJI[emoji]
         await ctx.send(msg)

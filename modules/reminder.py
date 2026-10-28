@@ -85,7 +85,7 @@ class EditReminderView(discord.ui.View):
         try:
             self.clear_items()
             await self.message.edit(view=None)
-        except:
+        except Exception:
             pass
 
 

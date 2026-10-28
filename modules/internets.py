@@ -28,7 +28,7 @@ class Internets(commands.Cog):
                 data = await resp.json()
                 pages = Paginator(ctx, data['list'], self.ud_callback)
                 await pages.start()
-            except:
+            except Exception:
                 await ctx.send(f"Failed to find {term} on urbandictionary")
 
     async def ud_callback(self, data, pg_number):
@@ -49,7 +49,7 @@ class Internets(commands.Cog):
         try:
             stamp = datetime.strptime(data['written_on'][:10],"%Y-%m-%d")
             e.timestamp = stamp
-        except:
+        except Exception:
             pass
 
         return e

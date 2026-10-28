@@ -32,7 +32,7 @@ class News(commands.Cog):
                 thurl = newest_news.getElementsByTagName('News:Image')[0].childNodes[0].data
                 if "http" in thurl:
                     e.set_thumbnail(url=thurl)
-            except:
+            except Exception:
                 pass
             await ctx.send(embed=e)
             #else:

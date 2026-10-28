@@ -262,7 +262,7 @@ class Wotd(commands.Cog):
             setterid = await self.single_getter(chan, "setter")
             try:
                 self.setter = await self.bot.fetch_user(setterid)
-            except:
+            except Exception:
                 self.setter = self.bot.user
             ts = await self.single_getter(chan, "timestamp")
             self.timestamp = datetime.strptime(ts, "%Y-%m-%d %H:%M:%S.%f%z")

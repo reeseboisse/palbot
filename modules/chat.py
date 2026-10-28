@@ -180,7 +180,7 @@ class Chat(commands.Cog):
              try:
                  number = int(opt[0])
                  await ctx.message.add_reaction(emoji[number])
-             except:
+             except Exception:
                  pass
             
     @commands.command(hidden=True, aliases=['onions'])
@@ -191,7 +191,7 @@ class Chat(commands.Cog):
             await ctx.message.reply(f"OK, you've been banned. <:LEOKEK:803268251064729670>")
         try:
             await ctx.message.author.timeout(timedelta(minutes=1), reason="!ban")
-        except:
+        except Exception:
             self.bot.logger.info(f"Failed to timeout {ctx.author}")
 
 
@@ -320,7 +320,7 @@ class Chat(commands.Cog):
         url = "https://c.xkcd.com/random/comic/"
         try:
             url = f"https://xkcd.com/{int(td)}/"
-        except:
+        except Exception:
             pass
         if td.lower() == "today":
             url = "https://xkcd.com/"

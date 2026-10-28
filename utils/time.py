@@ -175,7 +175,7 @@ class UserFriendlyTime(commands.Converter):
                 remaining = argument[:begin].strip()
 
             return await self.check_constraints(ctx, now, remaining)
-        except:
+        except Exception:
             import traceback
             traceback.print_exc()
             raise

@@ -131,7 +131,7 @@ class Strava(commands.Cog):
                     location = await self.bot.utils.Location.get_location_by_latlon(self.bot, 
                                                                                     recent_ride['start_latlng'][0], 
                                                                                     recent_ride['start_latlng'][1])
-                except:
+                except Exception:
                     location = ""
         else:
             location = f"{recent_ride['location_city']}, {recent_ride['location_state']}"
