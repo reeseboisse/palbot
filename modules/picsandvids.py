@@ -340,12 +340,12 @@ class Vids(commands.Cog):
                 return
 
             try:
-                media = submission['media']['reddit_video']
+                submission['media']['reddit_video']  # raises if not a video
             except (KeyError, TypeError):
                 try:
                     # maybe it's a cross post
                     crosspost = submission['crosspost_parent_list'][0]
-                    media = crosspost['media']['reddit_video']
+                    crosspost['media']['reddit_video']  # raises if not a video
                 except (KeyError, TypeError, IndexError):
                     # Not a reddit video.. don't care about it
                     return

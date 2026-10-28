@@ -2,9 +2,7 @@
 """
 Test script for LRCLIB lyrics module
 """
-import sys
 import asyncio
-from urllib.parse import quote
 
 import pytest
 
@@ -43,7 +41,7 @@ async def test_lrclib_api():
             if "message" in data and data["message"] == "Failed to find specified track":
                 print(f"  ✅ Correctly returned 404: {data['message']}")
             else:
-                print(f"  ⚠️  Unexpected response")
+                print("  ⚠️  Unexpected response")
 
         # Test 3: Alternative format
         print("\nTest 3: Alternative format - Billie Jean - Michael Jackson")
@@ -74,7 +72,7 @@ async def test_lrclib_api():
             all_present = all(field in data for field in required_fields)
             
             if all_present:
-                print(f"  ✅ All required fields present")
+                print("  ✅ All required fields present")
                 print(f"  Synced lyrics available: {bool(data['syncedLyrics'])}")
                 print(f"  Synced lyrics length: {len(data['syncedLyrics'])} chars")
             else:
