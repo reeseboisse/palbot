@@ -57,8 +57,8 @@ Temporary Items
 debug.log
 __pycache__
 logfiles/
-config/
-!config.py.example
+config/*
+!config/config.py.example
 data/
 modules/disabled
 
