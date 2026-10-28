@@ -104,21 +104,17 @@ read existing files as they are, with no migration.
 
 ## Configuration (`config/config.py`)
 
-Every key the code reads. **Bold** keys are used by the code but missing from
-`config/config.py.example`.
+Every key the code reads, as documented in `config/config.py.example`.
+`tests/test_config_example.py` keeps the example and the code in sync.
 
 `token`, `gsearchcx`, `gsearchapi`, `gsearch2`, `bravesearch`, `timezonedb`,
 `forecast_io_key`, `accuweather_key`, `weathercom_key`, `vcrossing_key`,
-`aqicn`, `untappd_clientid`, `untappd_clientsecret`, `distillertoken`,
-`wolframAPIkey`, `lastfm_api_key`, `stravaToken`, `twitterconsumerkey`,
-`twitterconsumersecret`, `twitter_subscriptions`, `reddituser`, `redditpw`,
-`redditclient`, `redditsecret`, `gemini_keys`, `github_copilot_token_path`,
-`github_copilot_auth_profile_path`, **`wotd_whitelist`**, **`mc_api_key`**,
-**`system_instruction`**, **`spoontacular_key`**, **`rt_url_1`**,
-**`rt_url_2`**, **`rt_headers`**.
-
-`goodreadskey`, `twitter_token` and `mapquest_key` are in the example but no
-longer read by any code.
+`aqicn`, `spoontacular_key`, `untappd_clientid`, `untappd_clientsecret`,
+`distillertoken`, `wolframAPIkey`, `mc_api_key`, `rt_url_1`, `rt_url_2`,
+`rt_headers`, `wotd_whitelist`, `lastfm_api_key`, `stravaToken`,
+`twitterconsumerkey`, `twitterconsumersecret`, `twitter_subscriptions`,
+`reddituser`, `redditpw`, `redditclient`, `redditsecret`, `gemini_keys`,
+`github_copilot_token_path`, `github_copilot_auth_profile_path`.
 
 ## Prefix commands
 

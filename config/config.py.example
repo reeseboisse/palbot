@@ -26,17 +26,30 @@ vcrossing_key = "abc123"
 # https://aqicn.org/api/
 aqicn = "abc123"
 
+# https://spoonacular.com/food-api (used by !wfd)
+spoontacular_key = "abc123"
+
 # https://untappd.com/api/docs
 untappd_clientid = "abc123"
 untappd_clientsecret = "abc123"
-
-# no longer available
-goodreadskey = "abc123"
 
 # This isn't exactly a private token since it's directly off the website
 distillertoken = "abc123"
 
 wolframAPIkey = "abc123"
+
+# Metacritic's backend API key, taken from the metacritic.com site (!mc)
+mc_api_key = "abc123"
+
+# Rotten Tomatoes search (!rt). Not a public API: the URL is
+# rt_url_1 + <movie name> + rt_url_2, sent with rt_headers
+rt_url_1 = "https://example.invalid/search?q="
+rt_url_2 = ""
+rt_headers = {}
+
+# Channel IDs where word-of-the-day runs. The first one is the main channel
+# and must be set for the Wotd cog to work.
+wotd_whitelist = []
 
 lastfm_api_key = "abc123"
 
@@ -44,14 +57,11 @@ stravaToken = "abc123"
 
 twitterconsumerkey = "abc123"
 twitterconsumersecret = "abc123"
-twitter_token = "abc123"
 
 # Format is {'twitterHandle' : [chanid, chanid2, chanid3]}
 # for example:
 # twitter_subscriptions = {'twitter' : [123]}
 twitter_subscriptions = {}
-
-mapquest_key = "abc123"
 
 # reddit api is stupid to work with cause you need all these things to get a token that lasts 1hr
 reddituser = "abc123"
