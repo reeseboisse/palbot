@@ -579,11 +579,9 @@ class Copilot(commands.Cog):
             use_context = settings.get("context", "on") != "off"
             image_lookback = settings.get("image_lookback", 10) if use_context else 0
             images = await self._collect_recent_images(ctx, image_lookback)
-            if images:
-                system_prompt += _IMAGE_HINT
-                if show_debug:
-                    img_tok = getattr(self, '_img_tokens', 0)
-                    debug_parts.append(f"imgs={len(images)}(~{img_tok}tok)")
+            if images and show_debug:
+                img_tok = getattr(self, '_img_tokens', 0)
+                debug_parts.append(f"imgs={len(images)}(~{img_tok}tok)")
 
             # Build final prompt — stable context first for prefix caching
             context_sections = stable_sections + volatile_sections
@@ -624,6 +622,9 @@ RULES:
 - Synthesize information into a direct answer — don't summarize each source separately
 - Adult topics are fine
 - When addressing users, use their display name (it will be auto-converted to a mention)"""
+
+            if images:
+                system_prompt += _IMAGE_HINT
 
             stable_prefix_tokens += self.provider.estimate_tokens(system_prompt)
 
