@@ -61,7 +61,6 @@ class Games(commands.Cog):
 
         out = []
         
-        tomorrow = today + datetime.timedelta(days=1)
         url = "https://liquipedia.net/counterstrike/Liquipedia:Matches"
         soup = await self.bot.utils.bs_from_url(self.bot, url)
 

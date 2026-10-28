@@ -346,7 +346,6 @@ Be detailed — this summary replaces the original messages and is the only reco
             # Trim raw messages to token budget
             raw_msgs = self._trim_messages_to_budget(raw_msgs, bot_user_id, raw_max_tokens)
             raw_text = self._format_messages(raw_msgs, bot_user_id)
-            raw_tokens = self.provider.estimate_tokens(raw_text)
 
             # Check re-compaction trigger — token-only, no time component.
             # Only count tokens BEYOND the configured raw_hours window — the raw

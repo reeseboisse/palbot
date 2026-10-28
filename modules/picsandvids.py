@@ -299,9 +299,6 @@ class Vids(commands.Cog):
     async def reddit_video(self, message, url):
         # This is a reddit url... but now I need the mpd URL...
 
-        spoiler = False
-        if "spoiler" in message.content.lower():
-            spoiler = True
         if message.author.id == self.bot.user.id:
             return
         token = await reddittoken(self)

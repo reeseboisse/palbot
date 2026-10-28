@@ -178,7 +178,6 @@ class Sports(commands.Cog):
     @commands.command()
     async def nba2(self, ctx, *, date: HumanTime = None):
         """Alternate NBA testing"""
-        todaydate = await self.sports_date(ctx, None)
         url = "https://global.nba.com/stats2/scores/miniscoreboardlive.json"
         
         async with self.bot.session.get(url) as resp:
@@ -364,7 +363,6 @@ class Sports(commands.Cog):
         async with self.bot.session.get(url) as resp:
             data = await resp.json()
             
-        games = []
         if not data['games']:
             await ctx.send(f"No games found for {date.date()}")
             return

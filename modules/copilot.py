@@ -1481,7 +1481,6 @@ RULES:
                 # Count raw messages since cache boundary
                 raw_msgs = await self.context_gatherer._fetch_messages_range(ctx, cache["newest_snowflake"])
                 raw_count = len(raw_msgs)
-                raw_text = self.context_gatherer._format_messages(raw_msgs, self.bot.user.id)
                 raw_hours_elapsed = (time.time() - self.context_gatherer._snowflake_to_ts(cache["newest_snowflake"])) / 3600
 
                 settings = await self.ai_cache.get_all_settings(guild_id, channel.id)

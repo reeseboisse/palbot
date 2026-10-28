@@ -158,7 +158,6 @@ class Persona(commands.Cog):
         if not rows:
             return "", 0
 
-        display_name = rows[0][0]
         # Regex to strip Discord custom emoji like <:name:123456> and <a:name:123456>
         custom_emoji_re = re.compile(r'<a?:\w+:\d+>')
         sample_msgs = []
