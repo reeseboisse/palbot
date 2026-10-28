@@ -2,7 +2,7 @@
 """
 Offline inventory of the bot's behaviour surface.
 
-Boots PalBot exactly as palbot.py defines it, loads every cog from modules/,
+Boots PalBot from palbot.py, loads every cog from modules/,
 and records everything a user or operator can observe without a live
 Discord connection: prefix commands (names, aliases, signatures, help text,
 checks, cooldowns), app commands, listeners, background loops, and the
@@ -99,15 +99,15 @@ def _make_sandbox():
     return tmp
 
 
-def _load_palbot_namespace():
-    """Execute palbot.py without the trailing module-level bot start."""
-    source = (REPO / "palbot.py").read_text()
-    lines = [l for l in source.splitlines()
-             if l.strip() not in ("bot = PalBot()", "bot.run()")]
-    ns = {"__name__": "palbot_inventory", "__file__": str(REPO / "palbot.py")}
-    exec(compile("\n".join(lines), str(REPO / "palbot.py"), "exec"), ns)
-    ns["ClientSession"] = _StubSession
-    return ns
+def _import_palbot(root):
+    # After the sandbox on sys.path, so its stub config wins over any real one.
+    sys.path.append(str(REPO))
+    import palbot
+    config_file = Path(palbot.config.__file__).resolve()
+    if config_file != (root / "config" / "config.py").resolve():
+        raise RuntimeError(f"refusing to run with a non-stub config: {config_file}")
+    palbot.ClientSession = _StubSession
+    return palbot
 
 
 def _check_names(checks):
@@ -226,16 +226,16 @@ def _sqlite_schemas(root):
     return schemas
 
 
-async def _collect(ns, root):
-    bot = ns["PalBot"]()
+async def _collect(palbot, root):
+    bot = palbot.PalBot()
     failed = []
-    real_print_exception = ns["traceback"].print_exception
+    real_print_exception = palbot.traceback.print_exception
 
     def record_failure(exc_type, exc, tb, file=None, **kwargs):
         failed.append(f"{exc_type.__name__}: {exc}")
         real_print_exception(exc_type, exc, tb, file=file, **kwargs)
 
-    ns["traceback"].print_exception = record_failure
+    palbot.traceback.print_exception = record_failure
     try:
         # Not `async with bot`: PalBot.close() calls sys.exit().
         await bot._async_setup_hook()
@@ -268,7 +268,7 @@ async def _collect(ns, root):
                     await close()
         await discord.Client.close(bot)
     finally:
-        ns["traceback"].print_exception = real_print_exception
+        palbot.traceback.print_exception = real_print_exception
 
     return {
         "bot": {
@@ -295,10 +295,10 @@ def collect():
     sys.path.insert(0, str(root))
     _block_network()
     _record_loop_starts()
-    ns = _load_palbot_namespace()
     # The bot and cogs print freely; keep stdout for the JSON.
     with contextlib.redirect_stdout(sys.stderr):
-        return asyncio.run(_collect(ns, root))
+        palbot = _import_palbot(root)
+        return asyncio.run(_collect(palbot, root))
 
 
 def main():
