@@ -346,6 +346,16 @@ class BuildMatchDictTests(unittest.TestCase):
         self.assertIsNone(wc._build_match_dict(None))
 
 
+def _score_block(row):
+    """The monospace score block of a row, i.e. everything before ``" |"``.
+
+    Played/live rows are fully monospace: ```score | status```. Scheduled rows
+    close the backticks after the separator so the status (a Discord
+    timestamp) renders outside the code span: ```score |`<t:...>``.
+    """
+    return row[1:].split(" |", 1)[0]
+
+
 class FormatMatchRowsTests(unittest.TestCase):
     def test_mixed_scheduled_and_finished_alignment(self):
         # 10-1 score forces slen=2 so scheduled rows must reserve 2-wide columns.
@@ -355,8 +365,9 @@ class FormatMatchRowsTests(unittest.TestCase):
         self.assertEqual(len(rows), 2)
         for row in rows:
             self.assertTrue(row.startswith("`"))
-            self.assertTrue(row.endswith("`"))
-        inner_lengths = {len(r.strip("`").split(" | ")[0]) for r in rows}
+        self.assertEqual(rows[0], f"`{_score_block(rows[0])} |`{sched['status']}")
+        self.assertTrue(rows[1].endswith("`"))
+        inner_lengths = {len(_score_block(r)) for r in rows}
         self.assertEqual(
             len(inner_lengths), 1,
             f"score columns should align across all rows, got widths {inner_lengths}",
@@ -451,13 +462,11 @@ class FormatMatchRowsWithDateTests(unittest.TestCase):
         self.assertEqual(len(rows), 2)
         for row in rows:
             self.assertTrue(row.startswith("`"))
-            self.assertTrue(row.endswith("`"))
             self.assertFalse(
                 row.startswith("06/"),
                 f"date leaked outside backticks: {row!r}",
             )
-            inner = row.strip("`").split(" | ", 1)[0]
-            self.assertIn("06/", inner)
+            self.assertIn("06/", _score_block(row))
 
 
 class EspnDateParamTests(unittest.TestCase):
