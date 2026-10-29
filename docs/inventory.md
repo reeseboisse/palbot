@@ -121,6 +121,23 @@ hardcoded upstream, and if they're left out the original values are used:
 `home_guild_id`, `sports_channel_id`, `gemini_chat_channels`,
 `brak_beef_user_id`.
 
+## Known issues (left as-is)
+
+Upstream behaviour that is kept on purpose. Change it only if someone decides to.
+
+- `!yr` has no emoji for `heavyrainshowers_*`, `lightrainshowersandthunder_*`
+  or `rainshowers_*` (day/night), so the forecast shows no icon for them.
+- `!bounce` sends `../media/yeah_Bounce.webm`. In Docker that resolves to
+  `/media`, which `docker-compose.yml` doesn't mount. It's unverified whether
+  the live bot can send it.
+- `datetime.utcnow()` and similar calls are deprecated in sports, twitter,
+  voice_tts, wotd and `utils/time`. They still work. Replacing them makes the
+  times timezone-aware, which changes comparisons, so it needs care.
+- There is commented-out code throughout, mostly in games, sports and gemini.
+- The largest modules (`copilot.py`, `weather.py`, `context_gatherer.py`) are
+  not split up. Add tests for their chat-message behaviour before refactoring
+  any of them.
+
 ## Prefix commands
 
 168 including subcommands. "Restrictions" are discord.py check predicates:
